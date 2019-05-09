@@ -1,0 +1,327 @@
+/*
+########   ######     ######## ########     ###    ##     ## ########
+##     ## ##    ##    ##       ##     ##   ## ##   ###   ### ##
+##     ## ##          ##       ##     ##  ##   ##  #### #### ##
+##     ##  ######     ######   ########  ##     ## ## ### ## ######
+##     ##       ##    ##       ##   ##   ######### ##     ## ##
+##     ## ##    ##    ##       ##    ##  ##     ## ##     ## ##
+########   ######     ##       ##     ## ##     ## ##     ## ########
+
+Description: This framework was built and intended for creating consistent layouts among all divSpot products.
+Author: Estian Hough (EstianH)
+Author URI: https://www.divspot.co.za
+Version: 1.0.0
+*/
+
+$ds-global-width-xl: 1680px;
+$ds-global-width-lg: 1200px;
+$ds-global-width-md: 992px;
+$ds-global-width-sm: 768px;
+$ds-global-width-xs: 576px;
+
+$white: #fff;
+$black: #000;
+$ds-grey: #efefef;
+$ds-grey-light: #f9f9f9;
+$ds-grey-dark: #515151;
+$ds-red: #D0021B;
+$ds-green: #f8fff8;
+
+@mixin ds-font( $color: $ds-grey-dark, $size: 16px, $line-height: 18px, $weight: 300 ) {
+	color: $color;
+	font-size: $size;
+	line-height: $line-height;
+	font-weight: $weight;
+}
+
+@mixin ds-dimensions( $width, $height ) {
+	width: $width;
+	height: $height;
+}
+
+@mixin ds-single-border( $direction, $width, $style, $color ) {
+	border-#{$direction}: $width $style $color;
+}
+
+@mixin ds-border-radius( $radius ) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+	        border-radius: $radius;
+}
+
+@mixin ds-text-rotate( $degrees ) {
+	-webkit-transform: rotate( $degrees );
+	   -moz-transform: rotate( $degrees );
+	    -ms-transform: rotate( $degrees );
+	     -o-transform: rotate( $degrees );
+}
+
+@mixin ds-box-shadow( $box-shadow ) {
+	-webkit-box-shadow: $box-shadow;
+	   -moz-box-shadow: $box-shadow;
+	        box-shadow: $box-shadow;
+}
+
+@mixin ds-cursor() {
+	cursor: pointer;
+	cursor: hand;
+}
+
+
+/*
+ ######  ##          ###     ######   ######  ########  ######
+##    ## ##         ## ##   ##    ## ##    ## ##       ##    ##
+##       ##        ##   ##  ##       ##       ##       ##
+##       ##       ##     ##  ######   ######  ######    ######
+##       ##       #########       ##       ## ##             ##
+##    ## ##       ##     ## ##    ## ##    ## ##       ##    ##
+ ######  ######## ##     ##  ######   ######  ########  ######
+*/
+.ds-success {
+	background-color: $ds-green;
+}
+
+.ds-block-title {
+	background: $ds-grey-dark;
+	display: block;
+
+	> h2 {
+		color: #fff;
+		line-height: 1.1em;
+	}
+}
+
+.ds-p-0  {          padding: 0 !important; }
+.ds-pt-0 {      padding-top: 0 !important; }
+.ds-pr-0 {    padding-right: 0 !important; }
+.ds-pb-0 {   padding-bottom: 0 !important; }
+.ds-pl-0 {     padding-left: 0 !important; }
+
+.ds-p-1  {         padding: 5px !important; }
+.ds-pt-1 {     padding-top: 5px !important; }
+.ds-pr-1 {   padding-right: 5px !important; }
+.ds-pb-1 {  padding-bottom: 5px !important; }
+.ds-pl-1 {    padding-left: 5px !important; }
+
+.ds-p-2  {        padding: 15px !important; }
+.ds-pt-2 {    padding-top: 15px !important; }
+.ds-pr-2 {  padding-right: 15px !important; }
+.ds-pb-2 { padding-bottom: 15px !important; }
+.ds-pl-2 {   padding-left: 15px !important; }
+
+.ds-p-3  {        padding: 20px !important; }
+.ds-pt-3 {    padding-top: 20px !important; }
+.ds-pr-3 {  padding-right: 20px !important; }
+.ds-pb-3 { padding-bottom: 20px !important; }
+.ds-pl-3 {   padding-left: 20px !important; }
+
+.ds-p-4  {        padding: 25px !important; }
+.ds-pt-4 {    padding-top: 25px !important; }
+.ds-pr-4 {  padding-right: 25px !important; }
+.ds-pb-4 { padding-bottom: 25px !important; }
+.ds-pl-4 {   padding-left: 25px !important; }
+
+.ds-p-5  {        padding: 30px !important; }
+.ds-pt-5 {    padding-top: 30px !important; }
+.ds-pr-5 {  padding-right: 30px !important; }
+.ds-pb-5 { padding-bottom: 30px !important; }
+.ds-pl-5 {   padding-left: 30px !important; }
+
+.ds-m-0  {            margin: 0 !important; }
+.ds-mt-0 {        margin-top: 0 !important; }
+.ds-mr-0 {      margin-right: 0 !important; }
+.ds-mb-0 {     margin-bottom: 0 !important; }
+.ds-ml-0 {       margin-left: 0 !important; }
+
+.ds-m-1  {          margin: 5px !important; }
+.ds-mt-1 {      margin-top: 5px !important; }
+.ds-mr-1 {    margin-right: 5px !important; }
+.ds-mb-1 {   margin-bottom: 5px !important; }
+.ds-ml-1 {     margin-left: 5px !important; }
+
+.ds-m-2  {         margin: 15px !important; }
+.ds-mt-2 {     margin-top: 15px !important; }
+.ds-mr-2 {   margin-right: 15px !important; }
+.ds-mb-2 {  margin-bottom: 15px !important; }
+.ds-ml-2 {    margin-left: 15px !important; }
+
+.ds-m-3  {         margin: 20px !important; }
+.ds-mt-3 {     margin-top: 20px !important; }
+.ds-mr-3 {   margin-right: 20px !important; }
+.ds-mb-3 {  margin-bottom: 20px !important; }
+.ds-ml-3 {    margin-left: 20px !important; }
+
+.ds-m-4  {         margin: 25px !important; }
+.ds-mt-4 {     margin-top: 25px !important; }
+.ds-mr-4 {   margin-right: 25px !important; }
+.ds-mb-4 {  margin-bottom: 25px !important; }
+.ds-ml-4 {    margin-left: 25px !important; }
+
+.ds-m-5  {         margin: 30px !important; }
+.ds-mt-5 {     margin-top: 30px !important; }
+.ds-mr-5 {   margin-right: 30px !important; }
+.ds-mb-5 {  margin-bottom: 30px !important; }
+.ds-ml-5 {    margin-left: 30px !important; }
+
+.ds-mr-auto { margin-right: auto !important; }
+.ds-ml-auto {  margin-left: auto !important; }
+
+.ds-text-left   {   text-align: left !important; }
+.ds-text-center { text-align: center !important; }
+.ds-text-right  {  text-align: right !important; }
+
+.ds-float-left  {  float: left !important; }
+.ds-float-right { float: right !important; }
+.ds-float-none  {  float: none !important; }
+
+.ds-d-inline-block { display: inline-block !important; }
+.ds-d-inline-flex  { display: inline-flex !important; }
+.ds-d-table        { display: table !important; }
+.ds-d-block        { display: block !important; }
+.ds-d-flex         { display: flex !important; }
+
+
+/*
+##          ###    ##    ##  #######  ##     ## ########
+##         ## ##    ##  ##  ##     ## ##     ##    ##
+##        ##   ##    ####   ##     ## ##     ##    ##
+##       ##     ##    ##    ##     ## ##     ##    ##
+##       #########    ##    ##     ## ##     ##    ##
+##       ##     ##    ##    ##     ## ##     ##    ##
+######## ##     ##    ##     #######   #######     ##
+*/
+.ds-wrapper {
+	max-width: $ds-global-width-lg;
+
+	* {
+		box-sizing: border-box;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	a,
+	p {
+		color: $ds-grey-dark;
+	}
+
+	.ds-blocks-container {
+		width: 100%;
+	}
+
+	.ds-block {
+		box-shadow: 0 1px 1px rgba( 0, 0, 0, .04 );
+		background: #fff;
+		float: left;
+	}
+
+	.ds-row {
+		display: block;
+		width: 100%;
+	}
+
+	.ds-row-center {
+		display: flex;
+		align-items: center;
+	}
+
+	.ds-col {
+		display: block;
+		float: left;
+		margin-right: 2%;
+	}
+
+	.ds-row {
+		> .ds-col-12,
+		> .ds-col-4:nth-child( 3n ),
+		> :last-child {
+			margin-right: 0;
+		}
+	}
+
+	.ds-block {
+		> a {
+			display: block;
+			text-decoration: none;
+
+			> img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	.ds-col-12 {
+		width: 100%;
+	}
+
+	@media ( min-width: $ds-global-width-xs ) {
+
+	}
+
+	@media ( min-width: $ds-global-width-sm ) {
+
+	}
+
+	@media ( min-width: $ds-global-width-md ) {
+		.ds-col-10 {
+			width: calc( 83.33% - ( 2% * 0.5 ) );
+		}
+
+		.ds-col-11 {
+			width: calc( 91.67% - ( 2% * 0.5 ) );
+		}
+
+		.ds-col-9 {
+			width: calc( 75% - ( 2% * 0.5 ) );
+		}
+
+		.ds-col-8 {
+			width: calc( 66.66% - ( 2% * 0.5 ) );
+		}
+
+		.ds-col-6 {
+			width: calc( 50% - ( 2% * 0.5 ) );
+		}
+
+		.ds-col-4 {
+			width: calc( 33.33% - ( ( 2% + 2% ) * 0.3333 ) );
+		}
+
+		.ds-col-4.ds-2col {
+			width: calc( 33.33% - ( 2% * 0.5 ) );
+		}
+
+		.ds-col-3 {
+			width: calc( 25% - ( ( 2% + 2% + 2% ) * 0.25 ) );
+		}
+
+		.ds-col-3.ds-2col {
+			width: calc( 25% - ( 2% * 0.5 ) );
+		}
+
+		.ds-col-2 {
+			width: calc( 16.66% - ( ( 2% + 2% + 2% + 2% + 2% ) * 0.16 ) );
+		}
+
+		.ds-col-2.ds-2col {
+			width: calc( 16.66% - ( 2% * 0.5 ) );
+		}
+
+		.ds-col-1 {
+			width: calc( 8.33% - ( 2% * 0.5 ) );
+		}
+	}
+
+	@media ( min-width: $ds-global-width-lg ) {
+
+	}
+
+	@media ( min-width: $ds-global-width-xl ) {
+
+	}
+}
