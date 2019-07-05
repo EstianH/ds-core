@@ -1,0 +1,35 @@
+@mixin ds-font( $color: $ds-grey-dark, $size: $ds-font-size, $line-height: $ds-line-height, $weight: 300 ) {
+	color: $color;
+	font-size: $size;
+	line-height: $line-height;
+	font-weight: $weight;
+}
+
+@mixin ds-dimensions( $width, $height ) {
+	width: $width;
+	height: $height;
+}
+
+@mixin ds-border-radius( $radius ) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+	        border-radius: $radius;
+}
+
+@mixin ds-text-rotate( $degrees ) {
+	-webkit-transform: rotate( $degrees );
+	   -moz-transform: rotate( $degrees );
+	    -ms-transform: rotate( $degrees );
+	     -o-transform: rotate( $degrees );
+}
+
+@mixin ds-box-shadow( $box-shadow ) {
+	-webkit-box-shadow: $box-shadow;
+	   -moz-box-shadow: $box-shadow;
+	        box-shadow: $box-shadow;
+}
+
+@mixin ds-cursor() {
+	cursor: pointer;
+	cursor: hand;
+}

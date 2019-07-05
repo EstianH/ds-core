@@ -1,0 +1,175 @@
+/*
+██████  ███████      ██████  ██████  ██████  ███████
+██   ██ ██          ██      ██    ██ ██   ██ ██
+██   ██ ███████     ██      ██    ██ ██████  █████
+██   ██      ██     ██      ██    ██ ██   ██ ██
+██████  ███████      ██████  ██████  ██   ██ ███████
+
+
+Description: This framework was built and intended for creating consistent layouts among all divSpot products.
+Author:      divSpot
+Author URI:  https://www.divspot.co.za
+Version:     1.0
+*/
+
+$ds-global-width-sm: 576px; // Bootstrap 4: 576px
+$ds-global-width-md: 768px; // Bootstrap 4: 768px
+$ds-global-width-lg: 992px; // Bootstrap 4: 992px
+$ds-global-width-xl: 1200px; // Bootstrap 4: 1200px
+$ds-global-width-xxl: 1680px; // DS Frame: 1680px
+
+$ds-grey-light: #f9f9f9;
+$ds-grey: #efefef;
+$ds-grey-dark: #515151;
+$ds-red: #D0021B;
+$ds-green: #f8fff8;
+
+$white: #fff;
+$black: #000;
+
+$ds-font-size: 16px;
+$ds-line-height: 18px;
+
+
+/*
+███████ ██    ██ ███    ██  ██████ ████████ ██  ██████  ███    ██ ███████
+██      ██    ██ ████   ██ ██         ██    ██ ██    ██ ████   ██ ██
+█████   ██    ██ ██ ██  ██ ██         ██    ██ ██    ██ ██ ██  ██ ███████
+██      ██    ██ ██  ██ ██ ██         ██    ██ ██    ██ ██  ██ ██      ██
+██       ██████  ██   ████  ██████    ██    ██  ██████  ██   ████ ███████
+*/
+@import 'functions';
+
+
+/*
+██       █████  ██    ██  ██████  ██    ██ ████████
+██      ██   ██  ██  ██  ██    ██ ██    ██    ██
+██      ███████   ████   ██    ██ ██    ██    ██
+██      ██   ██    ██    ██    ██ ██    ██    ██
+███████ ██   ██    ██     ██████   ██████     ██
+*/
+html {
+	.ds-wrapper {
+		max-width: 1280px;
+		@include ds-dimensions( 100%, 100% );
+
+		* {
+			box-sizing: border-box;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		.wp-editor-tabs > button {
+			box-sizing: initial;
+		}
+
+		h1,
+		h2,
+		h3,
+		p {
+			color: $ds-grey-dark;
+		}
+
+		.submit {
+			padding: 0;
+			margin: 0;
+		}
+
+		.ds-blocks-container {
+			@include ds-dimensions( 100%, 100% );
+
+			.ds-block {
+				box-shadow: 0 1px 1px rgba( 0, 0, 0, .04 );
+				background: #fff;
+				float: left;
+
+				.ds-block-title {
+					background: #f9f9f9;
+					display: block;
+
+					> h2 {
+						color: #515151;
+						line-height: 1.1em;
+					}
+
+					input {
+						display: none;
+					}
+				}
+			}
+		}
+
+		/* Notices */
+		.ds-success {
+			background-color: $ds-green;
+		}
+
+		/* Inputs & Labels */
+		label {
+			line-height: 25px;
+		}
+
+		/* Tabs */
+		.nav-tab-wrapper {
+			> a {
+				text-decoration: none;
+			}
+		}
+
+		.tab-content {
+			display: none;
+		}
+
+		.tab-content.active {
+			display: block;
+		}
+
+		/* DS Classes: DS Blocks */
+		.ds-row {
+			display: block;
+			width: 100%;
+		}
+
+		.ds-row-center {
+			display: flex;
+			align-items: center;
+		}
+
+		.ds-col {
+			display: block;
+			float: left;
+			margin-right: 2%;
+		}
+
+		.ds-row > .ds-col-12,
+		.ds-row > .ds-col-4:nth-child(3n),
+		.ds-row > :last-child {
+			margin-right: 0;
+		}
+		.ds-col-12 {
+			width: 100%;
+		}
+
+		/* DS Blocks: Content */
+		.ds-block > a {
+			display: block;
+			text-decoration: none;
+		}
+		.ds-block > a > img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+
+/*
+ ██████ ██       █████  ███████ ███████ ███████ ███████
+██      ██      ██   ██ ██      ██      ██      ██
+██      ██      ███████ ███████ ███████ █████   ███████
+██      ██      ██   ██      ██      ██ ██           ██
+ ██████ ███████ ██   ██ ███████ ███████ ███████ ███████
+*/
+@import 'classes';
