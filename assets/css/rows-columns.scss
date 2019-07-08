@@ -1,0 +1,331 @@
+$column-gutter-size:  2%;
+$column-width-third:  32%;
+$column-width-half:   49%;
+$column-width-full:   100%;
+
+.ds-wrapper {
+	.ds-row {
+		display: flex;
+		flex-wrap: wrap;
+		@include ds-dimensions( 100%, 100% );
+
+		.ds-block {
+			@include ds-dimensions( 100%, auto );
+			box-shadow: 0 1px 1px rgba( 0, 0, 0, .04 );
+			background: $white;
+
+			> .ds-block-title {
+				background: $ds-grey-light;
+				display: block;
+				padding: 15px;
+
+				> h2 {
+					color: $ds-grey-dark;
+					line-height: 1.1em;
+				}
+			}
+
+			> .ds-block-body {
+				padding: 15px;
+			}
+		}
+
+		&.ds-row-thirds {
+			> .ds-block {
+				@include ds-dimensions( $column-width-third, auto );
+				max-width: $column-width-third;
+
+				&:not( :first-child ) {
+					margin-right: 0;
+				}
+
+				&:not( :nth-child( 3n ) ) {
+					margin-right: $column-gutter-size;
+				}
+			}
+		}
+
+		&.ds-row-halves {
+			> .ds-block {
+				@include ds-dimensions( $column-width-half, auto );
+				max-width: $column-width-half;
+
+				&:not( :first-child ) {
+					margin-right: 0;
+				}
+
+				&:not( :nth-child( 2n ) ) {
+					margin-right: $column-gutter-size;
+				}
+			}
+		}
+
+		&.ds-row-full {
+			> .ds-block {
+				@include ds-dimensions( $column-width-full, auto );
+				max-width: $column-width-full;
+				margin-right: 0%;
+			}
+		}
+	}
+}
+
+
+/*
+██████  ███████        ██████  ██       ██████  ██████   █████  ██       ██     ██ ██ ██████  ████████ ██   ██       ███████ ███    ███
+██   ██ ██            ██       ██      ██    ██ ██   ██ ██   ██ ██       ██     ██ ██ ██   ██    ██    ██   ██       ██      ████  ████
+██   ██ ███████ █████ ██   ███ ██      ██    ██ ██████  ███████ ██ █████ ██  █  ██ ██ ██   ██    ██    ███████ █████ ███████ ██ ████ ██
+██   ██      ██       ██    ██ ██      ██    ██ ██   ██ ██   ██ ██       ██ ███ ██ ██ ██   ██    ██    ██   ██            ██ ██  ██  ██
+██████  ███████        ██████  ███████  ██████  ██████  ██   ██ ███████   ███ ███  ██ ██████     ██    ██   ██       ███████ ██      ██
+*/
+@media ( min-width: $ds-global-width-sm ) {
+	.ds-wrapper {
+		.ds-row {
+			&.ds-row-sm-thirds {
+				> .ds-block {
+					@include ds-dimensions( $column-width-third, auto );
+					max-width: $column-width-third;
+
+					&:not( :first-child ) {
+						margin-right: 0;
+					}
+
+					&:not( :nth-child( 3n ) ) {
+						margin-right: $column-gutter-size;
+					}
+				}
+			}
+
+			&.ds-row-sm-halves {
+				> .ds-block {
+					@include ds-dimensions( $column-width-half, auto );
+					max-width: $column-width-half;
+
+					&:not( :first-child ) {
+						margin-right: 0;
+					}
+
+					&:not( :nth-child( 2n ) ) {
+						margin-right: $column-gutter-size;
+					}
+				}
+			}
+
+			&.ds-row-sm-full {
+				> .ds-block {
+					@include ds-dimensions( $column-width-full, auto );
+					max-width: $column-width-full;
+					margin-right: 0%;
+				}
+			}
+		}
+	}
+}
+
+
+/*
+██████  ███████        ██████  ██       ██████  ██████   █████  ██       ██     ██ ██ ██████  ████████ ██   ██       ███    ███ ██████
+██   ██ ██            ██       ██      ██    ██ ██   ██ ██   ██ ██       ██     ██ ██ ██   ██    ██    ██   ██       ████  ████ ██   ██
+██   ██ ███████ █████ ██   ███ ██      ██    ██ ██████  ███████ ██ █████ ██  █  ██ ██ ██   ██    ██    ███████ █████ ██ ████ ██ ██   ██
+██   ██      ██       ██    ██ ██      ██    ██ ██   ██ ██   ██ ██       ██ ███ ██ ██ ██   ██    ██    ██   ██       ██  ██  ██ ██   ██
+██████  ███████        ██████  ███████  ██████  ██████  ██   ██ ███████   ███ ███  ██ ██████     ██    ██   ██       ██      ██ ██████
+*/
+@media ( min-width: $ds-global-width-md ) {
+	.ds-wrapper {
+		.ds-row {
+			&.ds-row-md-thirds {
+				> .ds-block {
+					@include ds-dimensions( $column-width-third, auto );
+					max-width: $column-width-third;
+
+					&:not( :first-child ) {
+						margin-right: 0;
+					}
+
+					&:not( :nth-child( 3n ) ) {
+						margin-right: $column-gutter-size;
+					}
+				}
+			}
+
+			&.ds-row-md-halves {
+				> .ds-block {
+					@include ds-dimensions( $column-width-half, auto );
+					max-width: $column-width-half;
+
+					&:not( :first-child ) {
+						margin-right: 0;
+					}
+
+					&:not( :nth-child( 2n ) ) {
+						margin-right: $column-gutter-size;
+					}
+				}
+			}
+
+			&.ds-row-md-full {
+				> .ds-block {
+					@include ds-dimensions( $column-width-full, auto );
+					max-width: $column-width-full;
+					margin-right: 0%;
+				}
+			}
+		}
+	}
+}
+
+
+/*
+██████  ███████        ██████  ██       ██████  ██████   █████  ██       ██     ██ ██ ██████  ████████ ██   ██       ██       ██████
+██   ██ ██            ██       ██      ██    ██ ██   ██ ██   ██ ██       ██     ██ ██ ██   ██    ██    ██   ██       ██      ██
+██   ██ ███████ █████ ██   ███ ██      ██    ██ ██████  ███████ ██ █████ ██  █  ██ ██ ██   ██    ██    ███████ █████ ██      ██   ███
+██   ██      ██       ██    ██ ██      ██    ██ ██   ██ ██   ██ ██       ██ ███ ██ ██ ██   ██    ██    ██   ██       ██      ██    ██
+██████  ███████        ██████  ███████  ██████  ██████  ██   ██ ███████   ███ ███  ██ ██████     ██    ██   ██       ███████  ██████
+*/
+@media ( min-width: $ds-global-width-lg ) {
+	.ds-wrapper {
+		.ds-row {
+			&.ds-row-lg-thirds {
+				> .ds-block {
+					@include ds-dimensions( $column-width-third, auto );
+					max-width: $column-width-third;
+
+					&:not( :first-child ) {
+						margin-right: 0;
+					}
+
+					&:not( :nth-child( 3n ) ) {
+						margin-right: $column-gutter-size;
+					}
+				}
+			}
+
+			&.ds-row-lg-halves {
+				> .ds-block {
+					@include ds-dimensions( $column-width-half, auto );
+					max-width: $column-width-half;
+
+					&:not( :first-child ) {
+						margin-right: 0;
+					}
+
+					&:not( :nth-child( 2n ) ) {
+						margin-right: $column-gutter-size;
+					}
+				}
+			}
+
+			&.ds-row-lg-full {
+				> .ds-block {
+					@include ds-dimensions( $column-width-full, auto );
+					max-width: $column-width-full;
+					margin-right: 0%;
+				}
+			}
+		}
+	}
+}
+
+
+/*
+██████  ███████        ██████  ██       ██████  ██████   █████  ██       ██     ██ ██ ██████  ████████ ██   ██      ██   ██ ██
+██   ██ ██            ██       ██      ██    ██ ██   ██ ██   ██ ██       ██     ██ ██ ██   ██    ██    ██   ██       ██ ██  ██
+██   ██ ███████ █████ ██   ███ ██      ██    ██ ██████  ███████ ██ █████ ██  █  ██ ██ ██   ██    ██    ███████ █████  ███   ██
+██   ██      ██       ██    ██ ██      ██    ██ ██   ██ ██   ██ ██       ██ ███ ██ ██ ██   ██    ██    ██   ██       ██ ██  ██
+██████  ███████        ██████  ███████  ██████  ██████  ██   ██ ███████   ███ ███  ██ ██████     ██    ██   ██      ██   ██ ███████
+*/
+@media ( min-width: $ds-global-width-xl ) {
+	.ds-wrapper {
+		.ds-row {
+			&.ds-row-xl-thirds {
+				> .ds-block {
+					@include ds-dimensions( $column-width-third, auto );
+					max-width: $column-width-third;
+
+					&:not( :first-child ) {
+						margin-right: 0;
+					}
+
+					&:not( :nth-child( 3n ) ) {
+						margin-right: $column-gutter-size;
+					}
+				}
+			}
+
+			&.ds-row-xl-halves {
+				> .ds-block {
+					@include ds-dimensions( $column-width-half, auto );
+					max-width: $column-width-half;
+
+					&:not( :first-child ) {
+						margin-right: 0;
+					}
+
+					&:not( :nth-child( 2n ) ) {
+						margin-right: $column-gutter-size;
+					}
+				}
+			}
+
+			&.ds-row-xl-full {
+				> .ds-block {
+					@include ds-dimensions( $column-width-full, auto );
+					max-width: $column-width-full;
+					margin-right: 0%;
+				}
+			}
+		}
+	}
+}
+
+
+/*
+██████  ███████        ██████  ██       ██████  ██████   █████  ██       ██     ██ ██ ██████  ████████ ██   ██      ██   ██ ██   ██ ██
+██   ██ ██            ██       ██      ██    ██ ██   ██ ██   ██ ██       ██     ██ ██ ██   ██    ██    ██   ██       ██ ██   ██ ██  ██
+██   ██ ███████ █████ ██   ███ ██      ██    ██ ██████  ███████ ██ █████ ██  █  ██ ██ ██   ██    ██    ███████ █████  ███     ███   ██
+██   ██      ██       ██    ██ ██      ██    ██ ██   ██ ██   ██ ██       ██ ███ ██ ██ ██   ██    ██    ██   ██       ██ ██   ██ ██  ██
+██████  ███████        ██████  ███████  ██████  ██████  ██   ██ ███████   ███ ███  ██ ██████     ██    ██   ██      ██   ██ ██   ██ ███████
+*/
+@media ( min-width: $ds-global-width-xxl ) {
+	.ds-wrapper {
+		.ds-row {
+			&.ds-row-xxl-thirds {
+				> .ds-block {
+					@include ds-dimensions( $column-width-third, auto );
+					max-width: $column-width-third;
+
+					&:not( :first-child ) {
+						margin-right: 0;
+					}
+
+					&:not( :nth-child( 3n ) ) {
+						margin-right: $column-gutter-size;
+					}
+				}
+			}
+
+			&.ds-row-xxl-halves {
+				> .ds-block {
+					@include ds-dimensions( $column-width-half, auto );
+					max-width: $column-width-half;
+
+					&:not( :first-child ) {
+						margin-right: 0;
+					}
+
+					&:not( :nth-child( 2n ) ) {
+						margin-right: $column-gutter-size;
+					}
+				}
+			}
+
+			&.ds-row-xxl-full {
+				> .ds-block {
+					@include ds-dimensions( $column-width-full, auto );
+					max-width: $column-width-full;
+					margin-right: 0%;
+				}
+			}
+		}
+	}
+}

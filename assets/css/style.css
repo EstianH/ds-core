@@ -20,83 +20,248 @@ Version:     1.0
 ██       ██████  ██   ████  ██████    ██    ██  ██████  ██   ████ ███████
 */
 /*
-██       █████  ██    ██  ██████  ██    ██ ████████
-██      ██   ██  ██  ██  ██    ██ ██    ██    ██
-██      ███████   ████   ██    ██ ██    ██    ██
-██      ██   ██    ██    ██    ██ ██    ██    ██
-███████ ██   ██    ██     ██████   ██████     ██
+███    ██  ██████  ████████ ██  ██████ ███████ ███████
+████   ██ ██    ██    ██    ██ ██      ██      ██
+██ ██  ██ ██    ██    ██    ██ ██      █████   ███████
+██  ██ ██ ██    ██    ██    ██ ██      ██           ██
+██   ████  ██████     ██    ██  ██████ ███████ ███████
 */
-html .ds-wrapper {
-  max-width: 1280px;
-  width: 100%;
-  height: 100%;
-  /* Notices */
-  /* Inputs & Labels */
-  /* Tabs */
-  /* DS Classes: DS Blocks */
-  /* DS Blocks: Content */ }
-  html .ds-wrapper * {
-    box-sizing: border-box; }
-    html .ds-wrapper *:focus {
-      outline: none; }
-  html .ds-wrapper .wp-editor-tabs > button {
-    box-sizing: initial; }
-  html .ds-wrapper h1,
-  html .ds-wrapper h2,
-  html .ds-wrapper h3,
-  html .ds-wrapper p {
-    color: #515151; }
-  html .ds-wrapper .submit {
-    padding: 0;
-    margin: 0; }
-  html .ds-wrapper .ds-blocks-container {
-    width: 100%;
-    height: 100%; }
-    html .ds-wrapper .ds-blocks-container .ds-block {
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
-      background: #fff;
-      float: left; }
-      html .ds-wrapper .ds-blocks-container .ds-block .ds-block-title {
-        background: #f9f9f9;
-        display: block; }
-        html .ds-wrapper .ds-blocks-container .ds-block .ds-block-title > h2 {
-          color: #515151;
-          line-height: 1.1em; }
-        html .ds-wrapper .ds-blocks-container .ds-block .ds-block-title input {
-          display: none; }
-  html .ds-wrapper .ds-success {
-    background-color: #f8fff8; }
-  html .ds-wrapper label {
-    line-height: 25px; }
-  html .ds-wrapper .nav-tab-wrapper > a {
-    text-decoration: none; }
-  html .ds-wrapper .tab-content {
-    display: none; }
-  html .ds-wrapper .tab-content.active {
-    display: block; }
-  html .ds-wrapper .ds-row {
-    display: block;
-    width: 100%; }
-  html .ds-wrapper .ds-row-center {
-    display: flex;
-    align-items: center; }
-  html .ds-wrapper .ds-col {
-    display: block;
-    float: left;
-    margin-right: 2%; }
-  html .ds-wrapper .ds-row > .ds-col-12,
-  html .ds-wrapper .ds-row > .ds-col-4:nth-child(3n),
-  html .ds-wrapper .ds-row > :last-child {
-    margin-right: 0; }
-  html .ds-wrapper .ds-col-12 {
-    width: 100%; }
-  html .ds-wrapper .ds-block > a {
-    display: block;
-    text-decoration: none; }
-  html .ds-wrapper .ds-block > a > img {
-    width: 100%;
-    height: auto; }
+.ds-wrapper .ds-success {
+  background-color: #f8fff8; }
 
+/*
+██     ██ ██████                 ██████  ███████ ███    ██ ███████ ██████   █████  ██
+██     ██ ██   ██               ██       ██      ████   ██ ██      ██   ██ ██   ██ ██
+██  █  ██ ██████      █████     ██   ███ █████   ██ ██  ██ █████   ██████  ███████ ██
+██ ███ ██ ██                    ██    ██ ██      ██  ██ ██ ██      ██   ██ ██   ██ ██
+ ███ ███  ██                     ██████  ███████ ██   ████ ███████ ██   ██ ██   ██ ███████
+*/
+.ds-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  height: 100%; }
+  .ds-wrapper * {
+    box-sizing: border-box; }
+    .ds-wrapper *:focus {
+      outline: none; }
+  .ds-wrapper h1, .ds-wrapper h2, .ds-wrapper h3,
+  .ds-wrapper p {
+    color: #515151; }
+
+/*
+███████  ██████  ██████  ███    ███ ███████
+██      ██    ██ ██   ██ ████  ████ ██
+█████   ██    ██ ██████  ██ ████ ██ ███████
+██      ██    ██ ██   ██ ██  ██  ██      ██
+██       ██████  ██   ██ ██      ██ ███████
+*/
+/*
+████████  █████  ██████  ███████
+   ██    ██   ██ ██   ██ ██
+   ██    ███████ ██████  ███████
+   ██    ██   ██ ██   ██      ██
+   ██    ██   ██ ██████  ███████
+*/
+.ds-wrapper .nav-tab-wrapper > a {
+  text-decoration: none; }
+.ds-wrapper .nav-tab-wrapper .tab-content {
+  display: none; }
+  .ds-wrapper .nav-tab-wrapper .tab-content.active {
+    display: block; }
+
+/*
+██████   ██████  ██     ██ ███████                ██████  ██████  ██      ██    ██ ███    ███ ███    ██ ███████
+██   ██ ██    ██ ██     ██ ██                    ██      ██    ██ ██      ██    ██ ████  ████ ████   ██ ██
+██████  ██    ██ ██  █  ██ ███████     █████     ██      ██    ██ ██      ██    ██ ██ ████ ██ ██ ██  ██ ███████
+██   ██ ██    ██ ██ ███ ██      ██               ██      ██    ██ ██      ██    ██ ██  ██  ██ ██  ██ ██      ██
+██   ██  ██████   ███ ███  ███████                ██████  ██████  ███████  ██████  ██      ██ ██   ████ ███████
+*/
+.ds-wrapper .ds-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%; }
+  .ds-wrapper .ds-row .ds-block {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    background: #fff; }
+    .ds-wrapper .ds-row .ds-block > .ds-block-title {
+      background: #f9f9f9;
+      display: block;
+      padding: 15px; }
+      .ds-wrapper .ds-row .ds-block > .ds-block-title > h2 {
+        color: #515151;
+        line-height: 1.1em; }
+    .ds-wrapper .ds-row .ds-block > .ds-block-body {
+      padding: 15px; }
+  .ds-wrapper .ds-row.ds-row-thirds > .ds-block {
+    width: 32%;
+    height: auto;
+    max-width: 32%; }
+    .ds-wrapper .ds-row.ds-row-thirds > .ds-block:not(:first-child) {
+      margin-right: 0; }
+    .ds-wrapper .ds-row.ds-row-thirds > .ds-block:not(:nth-child(3n)) {
+      margin-right: 2%; }
+  .ds-wrapper .ds-row.ds-row-halves > .ds-block {
+    width: 49%;
+    height: auto;
+    max-width: 49%; }
+    .ds-wrapper .ds-row.ds-row-halves > .ds-block:not(:first-child) {
+      margin-right: 0; }
+    .ds-wrapper .ds-row.ds-row-halves > .ds-block:not(:nth-child(2n)) {
+      margin-right: 2%; }
+  .ds-wrapper .ds-row.ds-row-full > .ds-block {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-right: 0%; }
+
+/*
+██████  ███████        ██████  ██       ██████  ██████   █████  ██       ██     ██ ██ ██████  ████████ ██   ██       ███████ ███    ███
+██   ██ ██            ██       ██      ██    ██ ██   ██ ██   ██ ██       ██     ██ ██ ██   ██    ██    ██   ██       ██      ████  ████
+██   ██ ███████ █████ ██   ███ ██      ██    ██ ██████  ███████ ██ █████ ██  █  ██ ██ ██   ██    ██    ███████ █████ ███████ ██ ████ ██
+██   ██      ██       ██    ██ ██      ██    ██ ██   ██ ██   ██ ██       ██ ███ ██ ██ ██   ██    ██    ██   ██            ██ ██  ██  ██
+██████  ███████        ██████  ███████  ██████  ██████  ██   ██ ███████   ███ ███  ██ ██████     ██    ██   ██       ███████ ██      ██
+*/
+@media (min-width: 576px) {
+  .ds-wrapper .ds-row.ds-row-sm-thirds > .ds-block {
+    width: 32%;
+    height: auto;
+    max-width: 32%; }
+    .ds-wrapper .ds-row.ds-row-sm-thirds > .ds-block:not(:first-child) {
+      margin-right: 0; }
+    .ds-wrapper .ds-row.ds-row-sm-thirds > .ds-block:not(:nth-child(3n)) {
+      margin-right: 2%; }
+  .ds-wrapper .ds-row.ds-row-sm-halves > .ds-block {
+    width: 49%;
+    height: auto;
+    max-width: 49%; }
+    .ds-wrapper .ds-row.ds-row-sm-halves > .ds-block:not(:first-child) {
+      margin-right: 0; }
+    .ds-wrapper .ds-row.ds-row-sm-halves > .ds-block:not(:nth-child(2n)) {
+      margin-right: 2%; }
+  .ds-wrapper .ds-row.ds-row-sm-full > .ds-block {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-right: 0%; } }
+/*
+██████  ███████        ██████  ██       ██████  ██████   █████  ██       ██     ██ ██ ██████  ████████ ██   ██       ███    ███ ██████
+██   ██ ██            ██       ██      ██    ██ ██   ██ ██   ██ ██       ██     ██ ██ ██   ██    ██    ██   ██       ████  ████ ██   ██
+██   ██ ███████ █████ ██   ███ ██      ██    ██ ██████  ███████ ██ █████ ██  █  ██ ██ ██   ██    ██    ███████ █████ ██ ████ ██ ██   ██
+██   ██      ██       ██    ██ ██      ██    ██ ██   ██ ██   ██ ██       ██ ███ ██ ██ ██   ██    ██    ██   ██       ██  ██  ██ ██   ██
+██████  ███████        ██████  ███████  ██████  ██████  ██   ██ ███████   ███ ███  ██ ██████     ██    ██   ██       ██      ██ ██████
+*/
+@media (min-width: 768px) {
+  .ds-wrapper .ds-row.ds-row-md-thirds > .ds-block {
+    width: 32%;
+    height: auto;
+    max-width: 32%; }
+    .ds-wrapper .ds-row.ds-row-md-thirds > .ds-block:not(:first-child) {
+      margin-right: 0; }
+    .ds-wrapper .ds-row.ds-row-md-thirds > .ds-block:not(:nth-child(3n)) {
+      margin-right: 2%; }
+  .ds-wrapper .ds-row.ds-row-md-halves > .ds-block {
+    width: 49%;
+    height: auto;
+    max-width: 49%; }
+    .ds-wrapper .ds-row.ds-row-md-halves > .ds-block:not(:first-child) {
+      margin-right: 0; }
+    .ds-wrapper .ds-row.ds-row-md-halves > .ds-block:not(:nth-child(2n)) {
+      margin-right: 2%; }
+  .ds-wrapper .ds-row.ds-row-md-full > .ds-block {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-right: 0%; } }
+/*
+██████  ███████        ██████  ██       ██████  ██████   █████  ██       ██     ██ ██ ██████  ████████ ██   ██       ██       ██████
+██   ██ ██            ██       ██      ██    ██ ██   ██ ██   ██ ██       ██     ██ ██ ██   ██    ██    ██   ██       ██      ██
+██   ██ ███████ █████ ██   ███ ██      ██    ██ ██████  ███████ ██ █████ ██  █  ██ ██ ██   ██    ██    ███████ █████ ██      ██   ███
+██   ██      ██       ██    ██ ██      ██    ██ ██   ██ ██   ██ ██       ██ ███ ██ ██ ██   ██    ██    ██   ██       ██      ██    ██
+██████  ███████        ██████  ███████  ██████  ██████  ██   ██ ███████   ███ ███  ██ ██████     ██    ██   ██       ███████  ██████
+*/
+@media (min-width: 992px) {
+  .ds-wrapper .ds-row.ds-row-lg-thirds > .ds-block {
+    width: 32%;
+    height: auto;
+    max-width: 32%; }
+    .ds-wrapper .ds-row.ds-row-lg-thirds > .ds-block:not(:first-child) {
+      margin-right: 0; }
+    .ds-wrapper .ds-row.ds-row-lg-thirds > .ds-block:not(:nth-child(3n)) {
+      margin-right: 2%; }
+  .ds-wrapper .ds-row.ds-row-lg-halves > .ds-block {
+    width: 49%;
+    height: auto;
+    max-width: 49%; }
+    .ds-wrapper .ds-row.ds-row-lg-halves > .ds-block:not(:first-child) {
+      margin-right: 0; }
+    .ds-wrapper .ds-row.ds-row-lg-halves > .ds-block:not(:nth-child(2n)) {
+      margin-right: 2%; }
+  .ds-wrapper .ds-row.ds-row-lg-full > .ds-block {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-right: 0%; } }
+/*
+██████  ███████        ██████  ██       ██████  ██████   █████  ██       ██     ██ ██ ██████  ████████ ██   ██      ██   ██ ██
+██   ██ ██            ██       ██      ██    ██ ██   ██ ██   ██ ██       ██     ██ ██ ██   ██    ██    ██   ██       ██ ██  ██
+██   ██ ███████ █████ ██   ███ ██      ██    ██ ██████  ███████ ██ █████ ██  █  ██ ██ ██   ██    ██    ███████ █████  ███   ██
+██   ██      ██       ██    ██ ██      ██    ██ ██   ██ ██   ██ ██       ██ ███ ██ ██ ██   ██    ██    ██   ██       ██ ██  ██
+██████  ███████        ██████  ███████  ██████  ██████  ██   ██ ███████   ███ ███  ██ ██████     ██    ██   ██      ██   ██ ███████
+*/
+@media (min-width: 1200px) {
+  .ds-wrapper .ds-row.ds-row-xl-thirds > .ds-block {
+    width: 32%;
+    height: auto;
+    max-width: 32%; }
+    .ds-wrapper .ds-row.ds-row-xl-thirds > .ds-block:not(:first-child) {
+      margin-right: 0; }
+    .ds-wrapper .ds-row.ds-row-xl-thirds > .ds-block:not(:nth-child(3n)) {
+      margin-right: 2%; }
+  .ds-wrapper .ds-row.ds-row-xl-halves > .ds-block {
+    width: 49%;
+    height: auto;
+    max-width: 49%; }
+    .ds-wrapper .ds-row.ds-row-xl-halves > .ds-block:not(:first-child) {
+      margin-right: 0; }
+    .ds-wrapper .ds-row.ds-row-xl-halves > .ds-block:not(:nth-child(2n)) {
+      margin-right: 2%; }
+  .ds-wrapper .ds-row.ds-row-xl-full > .ds-block {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-right: 0%; } }
+/*
+██████  ███████        ██████  ██       ██████  ██████   █████  ██       ██     ██ ██ ██████  ████████ ██   ██      ██   ██ ██   ██ ██
+██   ██ ██            ██       ██      ██    ██ ██   ██ ██   ██ ██       ██     ██ ██ ██   ██    ██    ██   ██       ██ ██   ██ ██  ██
+██   ██ ███████ █████ ██   ███ ██      ██    ██ ██████  ███████ ██ █████ ██  █  ██ ██ ██   ██    ██    ███████ █████  ███     ███   ██
+██   ██      ██       ██    ██ ██      ██    ██ ██   ██ ██   ██ ██       ██ ███ ██ ██ ██   ██    ██    ██   ██       ██ ██   ██ ██  ██
+██████  ███████        ██████  ███████  ██████  ██████  ██   ██ ███████   ███ ███  ██ ██████     ██    ██   ██      ██   ██ ██   ██ ███████
+*/
+@media (min-width: 1680px) {
+  .ds-wrapper .ds-row.ds-row-xxl-thirds > .ds-block {
+    width: 32%;
+    height: auto;
+    max-width: 32%; }
+    .ds-wrapper .ds-row.ds-row-xxl-thirds > .ds-block:not(:first-child) {
+      margin-right: 0; }
+    .ds-wrapper .ds-row.ds-row-xxl-thirds > .ds-block:not(:nth-child(3n)) {
+      margin-right: 2%; }
+  .ds-wrapper .ds-row.ds-row-xxl-halves > .ds-block {
+    width: 49%;
+    height: auto;
+    max-width: 49%; }
+    .ds-wrapper .ds-row.ds-row-xxl-halves > .ds-block:not(:first-child) {
+      margin-right: 0; }
+    .ds-wrapper .ds-row.ds-row-xxl-halves > .ds-block:not(:nth-child(2n)) {
+      margin-right: 2%; }
+  .ds-wrapper .ds-row.ds-row-xxl-full > .ds-block {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-right: 0%; } }
 /*
  ██████ ██       █████  ███████ ███████ ███████ ███████
 ██      ██      ██   ██ ██      ██      ██      ██

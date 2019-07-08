@@ -16,11 +16,11 @@
 	        border-radius: $radius;
 }
 
-@mixin ds-text-rotate( $degrees ) {
-	-webkit-transform: rotate( $degrees );
-	   -moz-transform: rotate( $degrees );
-	    -ms-transform: rotate( $degrees );
-	     -o-transform: rotate( $degrees );
+@mixin ds-transform( $transformation ) {
+	-webkit-transform: $transformation;
+	   -moz-transform: $transformation;
+	    -ms-transform: $transformation;
+	     -o-transform: $transformation;
 }
 
 @mixin ds-box-shadow( $box-shadow ) {

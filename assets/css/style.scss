@@ -42,127 +42,107 @@ $ds-line-height: 18px;
 
 
 /*
-██       █████  ██    ██  ██████  ██    ██ ████████
-██      ██   ██  ██  ██  ██    ██ ██    ██    ██
-██      ███████   ████   ██    ██ ██    ██    ██
-██      ██   ██    ██    ██    ██ ██    ██    ██
-███████ ██   ██    ██     ██████   ██████     ██
+███    ██  ██████  ████████ ██  ██████ ███████ ███████
+████   ██ ██    ██    ██    ██ ██      ██      ██
+██ ██  ██ ██    ██    ██    ██ ██      █████   ███████
+██  ██ ██ ██    ██    ██    ██ ██      ██           ██
+██   ████  ██████     ██    ██  ██████ ███████ ███████
 */
-html {
-	.ds-wrapper {
-		max-width: 1280px;
-		@include ds-dimensions( 100%, 100% );
+.ds-wrapper {
+	.ds-success {
+		background-color: $ds-green;
+	}
+}
 
-		* {
-			box-sizing: border-box;
 
-			&:focus {
-				outline: none;
-			}
+/*
+██     ██ ██████                 ██████  ███████ ███    ██ ███████ ██████   █████  ██
+██     ██ ██   ██               ██       ██      ████   ██ ██      ██   ██ ██   ██ ██
+██  █  ██ ██████      █████     ██   ███ █████   ██ ██  ██ █████   ██████  ███████ ██
+██ ███ ██ ██                    ██    ██ ██      ██  ██ ██ ██      ██   ██ ██   ██ ██
+ ███ ███  ██                     ██████  ███████ ██   ████ ███████ ██   ██ ██   ██ ███████
+*/
+.ds-wrapper {
+	max-width: $ds-global-width-xl;
+	@include ds-dimensions( 100%, 100% );
+
+	* {
+		box-sizing: border-box;
+
+		&:focus {
+			outline: none;
 		}
+	}
 
-		.wp-editor-tabs > button {
-			box-sizing: initial;
-		}
+	h1, h2, h3,
+	p {
+		color: $ds-grey-dark;
+	}
+}
 
-		h1,
-		h2,
-		h3,
-		p {
-			color: $ds-grey-dark;
-		}
 
-		.submit {
-			padding: 0;
-			margin: 0;
-		}
+/*
+███████  ██████  ██████  ███    ███ ███████
+██      ██    ██ ██   ██ ████  ████ ██
+█████   ██    ██ ██████  ██ ████ ██ ███████
+██      ██    ██ ██   ██ ██  ██  ██      ██
+██       ██████  ██   ██ ██      ██ ███████
+*/
 
-		.ds-blocks-container {
-			@include ds-dimensions( 100%, 100% );
 
-			.ds-block {
-				box-shadow: 0 1px 1px rgba( 0, 0, 0, .04 );
-				background: #fff;
-				float: left;
+@media ( min-width: $ds-global-width-sm ) {
 
-				.ds-block-title {
-					background: #f9f9f9;
-					display: block;
+}
 
-					> h2 {
-						color: #515151;
-						line-height: 1.1em;
-					}
+@media ( min-width: $ds-global-width-md ) {
 
-					input {
-						display: none;
-					}
-				}
-			}
-		}
+}
 
-		/* Notices */
-		.ds-success {
-			background-color: $ds-green;
-		}
+@media ( min-width: $ds-global-width-lg ) {
 
-		/* Inputs & Labels */
-		label {
-			line-height: 25px;
-		}
+}
 
-		/* Tabs */
-		.nav-tab-wrapper {
-			> a {
-				text-decoration: none;
-			}
+@media ( min-width: $ds-global-width-xl ) {
+
+}
+
+@media ( min-width: $ds-global-width-xxl ) {
+
+}
+
+
+/*
+████████  █████  ██████  ███████
+   ██    ██   ██ ██   ██ ██
+   ██    ███████ ██████  ███████
+   ██    ██   ██ ██   ██      ██
+   ██    ██   ██ ██████  ███████
+*/
+.ds-wrapper {
+	.nav-tab-wrapper {
+		> a {
+			text-decoration: none;
 		}
 
 		.tab-content {
 			display: none;
-		}
 
-		.tab-content.active {
-			display: block;
-		}
-
-		/* DS Classes: DS Blocks */
-		.ds-row {
-			display: block;
-			width: 100%;
-		}
-
-		.ds-row-center {
-			display: flex;
-			align-items: center;
-		}
-
-		.ds-col {
-			display: block;
-			float: left;
-			margin-right: 2%;
-		}
-
-		.ds-row > .ds-col-12,
-		.ds-row > .ds-col-4:nth-child(3n),
-		.ds-row > :last-child {
-			margin-right: 0;
-		}
-		.ds-col-12 {
-			width: 100%;
-		}
-
-		/* DS Blocks: Content */
-		.ds-block > a {
-			display: block;
-			text-decoration: none;
-		}
-		.ds-block > a > img {
-			width: 100%;
-			height: auto;
+			&.active {
+				display: block;
+			}
 		}
 	}
 }
+
+
+/*
+██████   ██████  ██     ██ ███████                ██████  ██████  ██      ██    ██ ███    ███ ███    ██ ███████
+██   ██ ██    ██ ██     ██ ██                    ██      ██    ██ ██      ██    ██ ████  ████ ████   ██ ██
+██████  ██    ██ ██  █  ██ ███████     █████     ██      ██    ██ ██      ██    ██ ██ ████ ██ ██ ██  ██ ███████
+██   ██ ██    ██ ██ ███ ██      ██               ██      ██    ██ ██      ██    ██ ██  ██  ██ ██  ██ ██      ██
+██   ██  ██████   ███ ███  ███████                ██████  ██████  ███████  ██████  ██      ██ ██   ████ ███████
+*/
+@import 'rows-columns';
 
 
 /*
