@@ -68,8 +68,10 @@ class DS_CORE_ADMIN {
 		add_action( 'admin_enqueue_scripts', array( $this, 'load_assets' ) );
 
 		// Filters
-		// Add plugin list settings link.
-		add_filter( "plugin_action_links_" . DSC_BASENAME, array( $this, 'register_plugin_action_links' ), 10, 1 );
+		add_filter( "plugin_action_links_" . DSC_BASENAME, array( $this, 'register_plugin_action_links' ), 10, 1 ); // Add plugin list settings link.
+
+		// Require plugin updater.
+		require_once DSC_ROOT . 'admin/inc/class-updater.php';
 	}
 
 	/**
@@ -131,7 +133,7 @@ class DS_CORE_ADMIN {
 	 * @uses definition DSC_VERSION The DS Core version.
 	 */
 	public function update_settings() {
-		if( DSC_VERSION !== get_option( 'dsc-version' ) )
+		if( version_compare( get_option( 'dsc-version' ), DSC_VERSION, '<' ) )
 			$this->activate();
 	}
 
@@ -155,7 +157,7 @@ class DS_CORE_ADMIN {
 	 * @return array $links An updated array of plugin links.
 	 */
 	public function register_plugin_action_links( $links ) {
-		$settings_link = '<a href="' . esc_url( admin_url( '/admin.php' ) ) . '?page=' . $this->plugin['slug'] . '">' . __('Settings') . '</a>';
+		$settings_link = '<a href="' . esc_url( admin_url( '/admin.php' ) ) . '?page=' . $this->slug . '">' . __( 'Settings', 'ds-core' ) . '</a>';
 		array_push( $links, $settings_link );
 
 		return $links;

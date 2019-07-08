@@ -23,12 +23,15 @@ if( !defined( 'ABSPATH' ) ) exit;
 if( !defined( 'DIVSPOT_URL' ) )
 	define( 'DIVSPOT_URL', 'https://www.divspot.co.za' );
 
+if( !defined( 'DIVSPOT_UPDATES_URL' ) )
+	define( 'DIVSPOT_UPDATES_URL', 'https://updates.divspot.co.za' );
+
 define( 'DSC_BASENAME', plugin_basename( __FILE__ ) );
 define( 'DSC_URL',      plugins_url( '', DSC_BASENAME) . '/' );
 define( 'DSC_ROOT',     __DIR__ . '/' );
 define( 'DSC_ASSETS',   DSC_URL . 'assets/' );
 define( 'DSC_TITLE',    'DS Core' );
-define( 'DSC_VERSION',  'v1.0' );
+define( 'DSC_VERSION',  '1.0' );
 
 
 /*
@@ -76,6 +79,6 @@ class DS_CORE {
 	 */
 	public function __construct() {
 		if ( is_admin() )
-			require_once DSC_ROOT . 'admin/admin.php';
+			require_once DSC_ROOT . 'admin/inc/class-admin.php';
 	}
 }
