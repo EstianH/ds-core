@@ -53,12 +53,12 @@ class DS_CORE_ADMIN {
 	}
 
 	/**
-	 * DS Core Admin constructor.
+	 * Constructor.
 	 *
-	 * @access public
+	 * @access private
 	 * @uses definition DSC_BASENAME The plugin basename.
 	 */
-	public function __construct() {
+	private function __construct() {
 		$this->capability = 'edit_plugins';
 		$this->slug       = 'ds-general';
 

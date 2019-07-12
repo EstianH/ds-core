@@ -34,6 +34,9 @@ define( 'DSC_TITLE',    'DS Core' );
 define( 'DSC_VERSION',  '1.0' );
 
 
+$dsc_core = DS_CORE::get_instance();
+
+
 /*
 ██████  ███████      ██████  ██████  ██████  ███████
 ██   ██ ██          ██      ██    ██ ██   ██ ██
@@ -41,11 +44,6 @@ define( 'DSC_VERSION',  '1.0' );
 ██   ██      ██     ██      ██    ██ ██   ██ ██
 ██████  ███████      ██████  ██████  ██   ██ ███████
 */
-$dsc_core = DS_CORE::get_instance();
-
-/**
- * Initialize DS Core components.
- */
 class DS_CORE {
 	/**
 	 * DS_CORE instance.
@@ -72,12 +70,12 @@ class DS_CORE {
 	}
 
 	/**
-	 * DS Core constructor.
+	 * Constructor.
 	 *
-	 * @access public
+	 * @access private
 	 * @uses definition DSC_ROOT The DS Core root folder path.
 	 */
-	public function __construct() {
+	private function __construct() {
 		if ( is_admin() )
 			require_once DSC_ROOT . 'admin/inc/class-admin.php';
 	}
