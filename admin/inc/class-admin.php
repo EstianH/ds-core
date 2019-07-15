@@ -1,8 +1,6 @@
 <?php
 if( !defined( 'ABSPATH' ) ) exit;
 
-$ds_core_admin = DS_CORE_ADMIN::get_instance();
-
 
 /*
 ██████  ███████      ██████  ██████  ██████  ███████      █████  ██████  ███    ███ ██ ███    ██
@@ -13,7 +11,7 @@ $ds_core_admin = DS_CORE_ADMIN::get_instance();
 */
 class DS_CORE_ADMIN {
 	/**
-	 * DS_CORE_ADMIN instance.
+	 * Class instance.
 	 *
 	 * @access private
 	 * @static
@@ -38,7 +36,7 @@ class DS_CORE_ADMIN {
 	private $slug;
 
 	/**
-	 * The DS Core object is created from within the class itself only if DS_CORE_ADMIN has no instance.
+	 * Returns the instance of the class.
 	 *
 	 * @access public
 	 * @static
@@ -173,6 +171,8 @@ class DS_CORE_ADMIN {
 		load_template( DSC_ROOT . 'admin/templates/general.php' );
 	}
 }
+
+$ds_core_admin = DS_CORE_ADMIN::get_instance();
 
 /*
  █████   ██████ ████████ ██ ██    ██  █████  ████████ ███████     ██ ██████  ███████  █████   ██████ ████████ ██ ██    ██  █████  ████████ ███████

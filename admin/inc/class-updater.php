@@ -1,8 +1,6 @@
 <?php
 if( !defined( 'ABSPATH' ) ) exit;
 
-$DS_CORE_UPDATER = DS_CORE_UPDATER::get_instance();
-
 
 /*
 ██████  ███████      ██████  ██████  ██████  ███████     ██    ██ ██████  ██████   █████  ████████ ███████ ██████
@@ -13,35 +11,22 @@ $DS_CORE_UPDATER = DS_CORE_UPDATER::get_instance();
 */
 class DS_CORE_UPDATER {
 	/**
-	 * Class instance.
+	 * Plugin slug.
 	 *
 	 * @access private
-	 * @static
-	 * @var DS_CORE_UPDATER
+	 * @var string
 	 */
-	private static $instance = NULL;
-
-	/**
-	 * Returns the instance of the class.
-	 *
-	 * @access public
-	 * @static
-	 * @return DS_CORE_UPDATER $instance
-	 */
-	public static function get_instance() {
-		if ( NULL === self::$instance ){
-			self::$instance = new DS_CORE_UPDATER();
-		}
-
-		return self::$instance;
-	}
+	private $slug;
 
 	/**
 	 * Constructor.
 	 *
-	 * @access private
+	 * @access public
 	 */
-	private function __construct() {
+	public function __construct() {
+		list ( $plugin_folder, $plugin_file ) = explode( '/', DSC_BASENAME );
+		$this->slug = str_replace( '.php', '', $plugin_file );
+
 		// Define the alternative API for plugin updates.
 		add_filter ( 'pre_set_site_transient_update_plugins', array( &$this, 'add_plugin_update_maybe' ), 10, 1 );
 
@@ -67,15 +52,14 @@ class DS_CORE_UPDATER {
 
 		// If a newer version is available, add the update
 		if ( version_compare( DSC_VERSION, $remote_version, '<' ) ) {
-			list ( $plugin_folder, $plugin_file ) = explode( '/', DSC_BASENAME );
-			$slug = str_replace( '.php', '', $plugin_file );
-			$plugin_remote_args = '?plugin=' . $slug . '&action=download';
+			$plugin_remote_args = '?plugin=' . $this->slug . '&action=download';
 
 			$obj = new stdClass();
-			$obj->slug = $slug;
+			$obj->slug = $this->slug;
 			$obj->new_version = $remote_version;
 			$obj->url = DIVSPOT_UPDATES_URL . $plugin_remote_args;
 			$obj->package = DIVSPOT_UPDATES_URL . $plugin_remote_args;
+
 			$transient->response[DSC_BASENAME] = $obj;
 		}
 
@@ -94,7 +78,7 @@ class DS_CORE_UPDATER {
 		if ( $arg->slug === $this->slug )
 			return $this->get_remote_information();
 
-		return false;
+		return $false;
 	}
 
 	/**
@@ -103,18 +87,10 @@ class DS_CORE_UPDATER {
 	 * @return bool|string $remote_version
 	 */
 	public function get_remote_version() {
-		$request = wp_remote_get(
-			DIVSPOT_UPDATES_URL,
-			array(
-				'body' => array(
-					'plugin' => 'ds-core',
-					'action' => 'version'
-				)
-			)
-		);
+		$remote_information_obj = $this->get_remote_information();
 
-		if ( !is_wp_error( $request ) || wp_remote_retrieve_response_code( $request ) === 200 )
-			return json_decode( $request['body'] );
+		if ( !empty( $remote_information_obj ) )
+			return $remote_information_obj->new_version;
 
 		return false;
 	}
@@ -125,7 +101,7 @@ class DS_CORE_UPDATER {
 	 * @return bool|object
 	 */
 	public function get_remote_information() {
-		$request = wp_remote_get(
+		$response = wp_remote_get(
 			DIVSPOT_UPDATES_URL,
 			array(
 				'body' => array(
@@ -135,9 +111,11 @@ class DS_CORE_UPDATER {
 			)
 		);
 
-		if ( !is_wp_error( $request ) || wp_remote_retrieve_response_code( $request ) === 200 )
-			return json_decode( $request['body'] );
+		if ( !is_wp_error( $response ) || wp_remote_retrieve_response_code( $response ) === 200 )
+			return unserialize( $response['body'] );
 
 		return false;
 	}
 }
+
+$DS_CORE_UPDATER = new DS_CORE_UPDATER();

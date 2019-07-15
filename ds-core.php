@@ -34,9 +34,6 @@ define( 'DSC_TITLE',    'DS Core' );
 define( 'DSC_VERSION',  '1.0' );
 
 
-$dsc_core = DS_CORE::get_instance();
-
-
 /*
 ██████  ███████      ██████  ██████  ██████  ███████
 ██   ██ ██          ██      ██    ██ ██   ██ ██
@@ -80,3 +77,5 @@ class DS_CORE {
 			require_once DSC_ROOT . 'admin/inc/class-admin.php';
 	}
 }
+
+$dsc_core = DS_CORE::get_instance();
