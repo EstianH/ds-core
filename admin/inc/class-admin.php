@@ -67,9 +67,6 @@ class DS_CORE_ADMIN {
 
 		// Filters
 		add_filter( "plugin_action_links_" . DSC_BASENAME, array( $this, 'register_plugin_action_links' ), 10, 1 ); // Add plugin list settings link.
-
-		// Require plugin updater.
-		require_once DSC_ROOT . 'admin/inc/class-updater.php';
 	}
 
 	/**
