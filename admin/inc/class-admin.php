@@ -58,15 +58,25 @@ class DS_CORE_ADMIN {
 	 */
 	private function __construct() {
 		$this->capability = 'edit_plugins';
-		$this->slug       = 'ds-general';
+		$this->slug       = 'ds-core';
 
-		$this->render_admin_menu();
+		// Register the admin setting pages.
+		add_action( 'admin_menu', array( $this, 'render_admin_menu' ) );
 
-		// Actions
-		add_action( 'admin_enqueue_scripts', array( $this, 'load_assets' ) );
+		// Enqueue assets.
+		add_action( 'admin_enqueue_scripts', function() {
+			wp_enqueue_style (  'dsc-style',  DSC_ASSETS . 'css/style.css', array(), DSC_VERSION );
+			wp_enqueue_script ( 'dsc-script', DSC_ASSETS . 'js/script.js',	array(), DSC_VERSION );
+		} );
 
 		// Filters
-		add_filter( "plugin_action_links_" . DSC_BASENAME, array( $this, 'register_plugin_action_links' ), 10, 1 ); // Add plugin list settings link.
+		add_filter( 'plugin_action_links_' . DSC_BASENAME, array( $this, 'register_plugin_action_links' ), 10, 1 ); // Add plugin list settings link.
+
+		// Register settings.
+		register_setting( 'dsc-settings', 'dsc-settings' );
+
+		// Register notifications.
+		add_action( 'admin_notices', array( $this, 'add_notices' ) );
 	}
 
 	/**
@@ -75,30 +85,29 @@ class DS_CORE_ADMIN {
 	 * @access public
 	 * @uses $GLOBALS
 	 * @uses definition DSC_ASSETS The DS Core assets folder path.
+	 * @uses definition DSC_TITLE The DS Core plugin title.
 	 */
 	public function render_admin_menu() {
-		add_action( 'admin_menu', function() {
-			if( !isset( $GLOBALS['admin_page_hooks'][$this->slug] ) ) {
-				add_menu_page(
-					'divSpot',
-					'divSpot',
-					$this->capability,
-					$this->slug,
-					array( $this, 'load_template_general' ),
-					DSC_ASSETS . 'images/icon-xs.png',
-					79
-				);
+		if( !isset( $GLOBALS['admin_page_hooks'][$this->slug] ) ) {
+			add_menu_page(
+				'divSpot',
+				'divSpot',
+				$this->capability,
+				$this->slug,
+				array( $this, 'load_template_settings_core' ),
+				DSC_ASSETS . 'images/icon-xs.png',
+				79
+			);
 
-				add_submenu_page(
-					$this->slug,
-					'General',
-					'General',
-					$this->capability,
-					$this->slug,
-					array( $this, 'load_template_general' )
-				);
-			}
-		});
+			add_submenu_page(
+				$this->slug,
+				DSC_TITLE,
+				DSC_TITLE,
+				$this->capability,
+				$this->slug,
+				array( $this, 'load_template_settings_core' )
+			);
+		}
 	}
 
 	/**
@@ -136,18 +145,6 @@ class DS_CORE_ADMIN {
 	 * Register/Enqueue DS Core assets.
 	 *
 	 * @access public
-	 * @uses   definition DSC_ASSETS  The DS Core assets folder path.
-	 * @uses   definition DSC_VERSION The DS Core version.
-	 */
-	public function load_assets() {
-		wp_enqueue_style (  'dsc-style',  DSC_ASSETS . 'css/style.css', array(), DSC_VERSION );
-		wp_enqueue_script ( 'dsc-script', DSC_ASSETS . 'js/script.js',	array(), DSC_VERSION );
-	}
-
-	/**
-	 * Register/Enqueue DS Core assets.
-	 *
-	 * @access public
 	 * @param array  $links Array of plugin links.
 	 * @return array $links An updated array of plugin links.
 	 */
@@ -159,17 +156,36 @@ class DS_CORE_ADMIN {
 	}
 
 	/**
-	 * Render the general page.
+	 * Display admin notifications.
+	 *
+	 * @access public
+	 */
+	public function add_notices() {
+		$screen = get_current_screen();
+
+		if( $screen->id === 'toplevel_page_ds-core' ) {
+			if( isset( $_GET['settings-updated'] ) ) { ?>
+				<div class="notice notice-success is-dismissible mt-2 mr-0 mb-2 ml-0">
+					<p><?php _e( 'Settings saved.', 'ds-core' ); ?></p>
+				</div>
+			<?php }
+		}
+	}
+
+	/**
+	 * Render the DS Core settings page.
 	 *
 	 * @access public
 	 * @uses   definition DSC_ROOT The DS Core root folder path.
+	 * @uses   definition DSC_ROOT The DS Core root folder path.
 	 */
-	public function load_template_general() {
-		load_template( DSC_ROOT . 'admin/templates/general.php' );
+	public function load_template_settings_core() {
+		load_template( DSC_ROOT . 'admin/templates/settings-core.php' );
 	}
 }
 
 $ds_core_admin = DS_CORE_ADMIN::get_instance();
+
 
 /*
  █████   ██████ ████████ ██ ██    ██  █████  ████████ ███████     ██ ██████  ███████  █████   ██████ ████████ ██ ██    ██  █████  ████████ ███████

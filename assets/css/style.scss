@@ -88,7 +88,17 @@ $ds-line-height: 18px;
 ██      ██    ██ ██   ██ ██  ██  ██      ██
 ██       ██████  ██   ██ ██      ██ ███████
 */
+.ds-wrapper {
+	.ds-checkbox {
+		&.ds-input-toggle {
+			display: block;
+		}
 
+		& + .ds-input-toggle-box {
+			display: none;
+		}
+	}
+}
 
 @media ( min-width: $ds-global-width-sm ) {
 

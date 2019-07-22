@@ -85,7 +85,12 @@
 .ds-d-inline-flex  { display: inline-flex !important; }
 .ds-d-table        { display: table !important; }
 .ds-d-block        { display: block !important; }
-.ds-d-flex         { display: flex !important; }
+.ds-d-flex         {
+											display: -webkit-box !important;
+											display: -ms-flexbox !important;
+											display: flex !important;
+									 }
+.ds-d-none         { display: none !important; }
 
 .flex-wrap {
 	-webkit-flex-wrap: wrap;
