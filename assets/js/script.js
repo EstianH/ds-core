@@ -1,10 +1,22 @@
+/*
+██████  ██       ██████   ██████ ██   ██   ████████  ██████   ██████   ██████  ██      ███████ ██████
+██   ██ ██      ██    ██ ██      ██  ██       ██    ██    ██ ██       ██       ██      ██      ██   ██
+██████  ██      ██    ██ ██      █████  █████ ██    ██    ██ ██   ███ ██   ███ ██      █████   ██████
+██   ██ ██      ██    ██ ██      ██  ██       ██    ██    ██ ██    ██ ██    ██ ██      ██      ██   ██
+██████  ███████  ██████   ██████ ██   ██      ██     ██████   ██████   ██████  ███████ ███████ ██   ██
+*/
 jQuery( document ).ready( function() {
-	jQuery( '.ds-checkbox.active + .ds-input-toggle-box' ).show();
+	jQuery( '.ds-block-toggler .ds-block-toggler-input' ).on( 'change', function() {
+		var parent = jQuery( this ).closest( '.ds-block-toggler' );
 
-	jQuery( '.ds-checkbox > input' ).on( 'change', function() {
-		var parent = jQuery( this ).parent();
-
-		parent.toggleClass( 'active' );
-		parent.siblings( '.ds-input-toggle-box' ).slideToggle();
+		if ( jQuery( this ).is( ':checked' ) ) {
+			parent.siblings( '.ds-block-toggler-block' ).stop( true ).slideDown( function() {
+				parent.addClass( 'active' );
+			} );
+		} else {
+			parent.siblings( '.ds-block-toggler-block' ).stop( true ).slideUp( function() {
+				parent.removeClass( 'active' );
+			} );
+		}
 	} );
 } );

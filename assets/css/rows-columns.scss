@@ -1,15 +1,25 @@
-.ds-wrapper {
+.ds-container {
+	padding-left: 7.5px;
+	padding-right: 7.5px;
+
+	* {
+		box-sizing: border-box;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
 	.ds-row {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		@include ds-dimensions( 100%, 100% );
 		margin-left: -7.5px;
 		margin-right: -7.5px;
 
-		> .ds-col {
+		.ds-col {
 			-ms-flex-preferred-size: 0;
 			flex-basis: 0;
 			-webkit-box-flex: 1;
@@ -20,88 +30,90 @@
 			padding-right: 7.5px;
 		}
 
-		> .ds-col-1,
-		> .ds-col-2,
-		> .ds-col-3,
-		> .ds-col-4,
-		> .ds-col-5,
-		> .ds-col-6,
-		> .ds-col-7,
-		> .ds-col-8,
-		> .ds-col-9,
-		> .ds-col-10,
-		> .ds-col-11,
-		> .ds-col-12 {
+		.ds-col-1,
+		.ds-col-2,
+		.ds-col-3,
+		.ds-col-4,
+		.ds-col-5,
+		.ds-col-6,
+		.ds-col-7,
+		.ds-col-8,
+		.ds-col-9,
+		.ds-col-10,
+		.ds-col-11,
+		.ds-col-12 {
 			-webkit-box-flex: 0;
+			padding-left: 7.5px;
+			padding-right: 7.5px;
 		}
 
-		> .ds-col-1 {
+		.ds-col-1 {
 			-ms-flex:  0 0 8.333333%;
 			flex:      0 0 8.333333%;
 			max-width: 8.333333%;
 		}
 
-		> .ds-col-2 {
+		.ds-col-2 {
 			-ms-flex:  0 0 16.666667%;
 			flex:      0 0 16.666667%;
 			max-width: 16.666667%;
 		}
 
-		> .ds-col-3 {
+		.ds-col-3 {
 			-ms-flex:  0 0 25%;
 			flex:      0 0 25%;
 			max-width: 25%;
 		}
 
-		> .ds-col-4 {
+		.ds-col-4 {
 			-ms-flex:  0 0 33.333333%;
 			flex:      0 0 33.333333%;
 			max-width: 33.333333%;
 		}
 
-		> .ds-col-5 {
+		.ds-col-5 {
 			-ms-flex:  0 0 41.666667%;
 			flex:      0 0 41.666667%;
 			max-width: 41.666667%;
 		}
 
-		> .ds-col-6 {
+		.ds-col-6 {
 			-ms-flex:  0 0 50%;
 			flex:      0 0 50%;
 			max-width: 50%;
 		}
 
-		> .ds-col-7 {
+		.ds-col-7 {
 			-ms-flex:  0 0 58.333333%;
 			flex:      0 0 58.333333%;
 			max-width: 58.333333%;
 		}
 
-		> .ds-col-8 {
+		.ds-col-8 {
 			-ms-flex:  0 0 66.666667%;
 			flex:      0 0 66.666667%;
 			max-width: 66.666667%;
 		}
 
-		> .ds-col-9 {
+		.ds-col-9 {
 			-ms-flex:  0 0 75%;
 			flex:      0 0 75%;
 			max-width: 75%;
 		}
 
-		> .ds-col-10 {
+		.ds-col-10 {
 			-ms-flex:  0 0 83.333333%;
 			flex:      0 0 83.333333%;
 			max-width: 83.333333%;
 		}
 
-		> .ds-col-11 {
+		.ds-col-11 {
 			-ms-flex:  0 0 91.666667%;
 			flex:      0 0 91.666667%;
 			max-width: 91.666667%;
 		}
 
-		> .ds-col-12 {
+		.ds-col-12 {
 			-ms-flex:  0 0 100%;
 			flex:      0 0 100%;
 			max-width: 100%;
@@ -139,75 +151,75 @@
 ██████  ███████        ██████  ███████  ██████  ██████  ██   ██ ███████   ███ ███  ██ ██████     ██    ██   ██       ███████ ██      ██
 */
 @media ( min-width: $ds-global-width-sm ) {
-	.ds-wrapper {
+	.ds-container {
 		.ds-row {
-			> .ds-col-sm-1 {
+			.ds-col-sm-1 {
 				-ms-flex:  0 0 8.333333%;
 				flex:      0 0 8.333333%;
 				max-width: 8.333333%;
 			}
 
-			> .ds-col-sm-2 {
+			.ds-col-sm-2 {
 				-ms-flex:  0 0 16.666667%;
 				flex:      0 0 16.666667%;
 				max-width: 16.666667%;
 			}
 
-			> .ds-col-sm-3 {
+			.ds-col-sm-3 {
 				-ms-flex:  0 0 25%;
 				flex:      0 0 25%;
 				max-width: 25%;
 			}
 
-			> .ds-col-sm-4 {
+			.ds-col-sm-4 {
 				-ms-flex:  0 0 33.333333%;
 				flex:      0 0 33.333333%;
 				max-width: 33.333333%;
 			}
 
-			> .ds-col-sm-5 {
+			.ds-col-sm-5 {
 				-ms-flex:  0 0 41.666667%;
 				flex:      0 0 41.666667%;
 				max-width: 41.666667%;
 			}
 
-			> .ds-col-sm-6 {
+			.ds-col-sm-6 {
 				-ms-flex:  0 0 50%;
 				flex:      0 0 50%;
 				max-width: 50%;
 			}
 
-			> .ds-col-sm-7 {
+			.ds-col-sm-7 {
 				-ms-flex:  0 0 58.333333%;
 				flex:      0 0 58.333333%;
 				max-width: 58.333333%;
 			}
 
-			> .ds-col-sm-8 {
+			.ds-col-sm-8 {
 				-ms-flex:  0 0 66.666667%;
 				flex:      0 0 66.666667%;
 				max-width: 66.666667%;
 			}
 
-			> .ds-col-sm-9 {
+			.ds-col-sm-9 {
 				-ms-flex:  0 0 75%;
 				flex:      0 0 75%;
 				max-width: 75%;
 			}
 
-			> .ds-col-sm-10 {
+			.ds-col-sm-10 {
 				-ms-flex:  0 0 83.333333%;
 				flex:      0 0 83.333333%;
 				max-width: 83.333333%;
 			}
 
-			> .ds-col-sm-11 {
+			.ds-col-sm-11 {
 				-ms-flex:  0 0 91.666667%;
 				flex:      0 0 91.666667%;
 				max-width: 91.666667%;
 			}
 
-			> .ds-col-sm-12 {
+			.ds-col-sm-12 {
 				-ms-flex:  0 0 100%;
 				flex:      0 0 100%;
 				max-width: 100%;
@@ -225,75 +237,75 @@
 ██████  ███████        ██████  ███████  ██████  ██████  ██   ██ ███████   ███ ███  ██ ██████     ██    ██   ██       ██      ██ ██████
 */
 @media ( min-width: $ds-global-width-md ) {
-	.ds-wrapper {
+	.ds-container {
 		.ds-row {
-			> .ds-col-md-1 {
+			.ds-col-md-1 {
 				-ms-flex:  0 0 8.333333%;
 				flex:      0 0 8.333333%;
 				max-width: 8.333333%;
 			}
 
-			> .ds-col-md-2 {
+			.ds-col-md-2 {
 				-ms-flex:  0 0 16.666667%;
 				flex:      0 0 16.666667%;
 				max-width: 16.666667%;
 			}
 
-			> .ds-col-md-3 {
+			.ds-col-md-3 {
 				-ms-flex:  0 0 25%;
 				flex:      0 0 25%;
 				max-width: 25%;
 			}
 
-			> .ds-col-md-4 {
+			.ds-col-md-4 {
 				-ms-flex:  0 0 33.333333%;
 				flex:      0 0 33.333333%;
 				max-width: 33.333333%;
 			}
 
-			> .ds-col-md-5 {
+			.ds-col-md-5 {
 				-ms-flex:  0 0 41.666667%;
 				flex:      0 0 41.666667%;
 				max-width: 41.666667%;
 			}
 
-			> .ds-col-md-6 {
+			.ds-col-md-6 {
 				-ms-flex:  0 0 50%;
 				flex:      0 0 50%;
 				max-width: 50%;
 			}
 
-			> .ds-col-md-7 {
+			.ds-col-md-7 {
 				-ms-flex:  0 0 58.333333%;
 				flex:      0 0 58.333333%;
 				max-width: 58.333333%;
 			}
 
-			> .ds-col-md-8 {
+			.ds-col-md-8 {
 				-ms-flex:  0 0 66.666667%;
 				flex:      0 0 66.666667%;
 				max-width: 66.666667%;
 			}
 
-			> .ds-col-md-9 {
+			.ds-col-md-9 {
 				-ms-flex:  0 0 75%;
 				flex:      0 0 75%;
 				max-width: 75%;
 			}
 
-			> .ds-col-md-10 {
+			.ds-col-md-10 {
 				-ms-flex:  0 0 83.333333%;
 				flex:      0 0 83.333333%;
 				max-width: 83.333333%;
 			}
 
-			> .ds-col-md-11 {
+			.ds-col-md-11 {
 				-ms-flex:  0 0 91.666667%;
 				flex:      0 0 91.666667%;
 				max-width: 91.666667%;
 			}
 
-			> .ds-col-md-12 {
+			.ds-col-md-12 {
 				-ms-flex:  0 0 100%;
 				flex:      0 0 100%;
 				max-width: 100%;
@@ -311,75 +323,75 @@
 ██████  ███████        ██████  ███████  ██████  ██████  ██   ██ ███████   ███ ███  ██ ██████     ██    ██   ██       ███████  ██████
 */
 @media ( min-width: $ds-global-width-lg ) {
-	.ds-wrapper {
+	.ds-container {
 		.ds-row {
-			> .ds-col-lg-1 {
+			.ds-col-lg-1 {
 				-ms-flex:  0 0 8.333333%;
 				flex:      0 0 8.333333%;
 				max-width: 8.333333%;
 			}
 
-			> .ds-col-lg-2 {
+			.ds-col-lg-2 {
 				-ms-flex:  0 0 16.666667%;
 				flex:      0 0 16.666667%;
 				max-width: 16.666667%;
 			}
 
-			> .ds-col-lg-3 {
+			.ds-col-lg-3 {
 				-ms-flex:  0 0 25%;
 				flex:      0 0 25%;
 				max-width: 25%;
 			}
 
-			> .ds-col-lg-4 {
+			.ds-col-lg-4 {
 				-ms-flex:  0 0 33.333333%;
 				flex:      0 0 33.333333%;
 				max-width: 33.333333%;
 			}
 
-			> .ds-col-lg-5 {
+			.ds-col-lg-5 {
 				-ms-flex:  0 0 41.666667%;
 				flex:      0 0 41.666667%;
 				max-width: 41.666667%;
 			}
 
-			> .ds-col-lg-6 {
+			.ds-col-lg-6 {
 				-ms-flex:  0 0 50%;
 				flex:      0 0 50%;
 				max-width: 50%;
 			}
 
-			> .ds-col-lg-7 {
+			.ds-col-lg-7 {
 				-ms-flex:  0 0 58.333333%;
 				flex:      0 0 58.333333%;
 				max-width: 58.333333%;
 			}
 
-			> .ds-col-lg-8 {
+			.ds-col-lg-8 {
 				-ms-flex:  0 0 66.666667%;
 				flex:      0 0 66.666667%;
 				max-width: 66.666667%;
 			}
 
-			> .ds-col-lg-9 {
+			.ds-col-lg-9 {
 				-ms-flex:  0 0 75%;
 				flex:      0 0 75%;
 				max-width: 75%;
 			}
 
-			> .ds-col-lg-10 {
+			.ds-col-lg-10 {
 				-ms-flex:  0 0 83.333333%;
 				flex:      0 0 83.333333%;
 				max-width: 83.333333%;
 			}
 
-			> .ds-col-lg-11 {
+			.ds-col-lg-11 {
 				-ms-flex:  0 0 91.666667%;
 				flex:      0 0 91.666667%;
 				max-width: 91.666667%;
 			}
 
-			> .ds-col-lg-12 {
+			.ds-col-lg-12 {
 				-ms-flex:  0 0 100%;
 				flex:      0 0 100%;
 				max-width: 100%;
@@ -397,75 +409,75 @@
 ██████  ███████        ██████  ███████  ██████  ██████  ██   ██ ███████   ███ ███  ██ ██████     ██    ██   ██      ██   ██ ███████
 */
 @media ( min-width: $ds-global-width-xl ) {
-	.ds-wrapper {
+	.ds-container {
 		.ds-row {
-			> .ds-col-xl-1 {
+			.ds-col-xl-1 {
 				-ms-flex:  0 0 8.333333%;
 				flex:      0 0 8.333333%;
 				max-width: 8.333333%;
 			}
 
-			> .ds-col-xl-2 {
+			.ds-col-xl-2 {
 				-ms-flex:  0 0 16.666667%;
 				flex:      0 0 16.666667%;
 				max-width: 16.666667%;
 			}
 
-			> .ds-col-xl-3 {
+			.ds-col-xl-3 {
 				-ms-flex:  0 0 25%;
 				flex:      0 0 25%;
 				max-width: 25%;
 			}
 
-			> .ds-col-xl-4 {
+			.ds-col-xl-4 {
 				-ms-flex:  0 0 33.333333%;
 				flex:      0 0 33.333333%;
 				max-width: 33.333333%;
 			}
 
-			> .ds-col-xl-5 {
+			.ds-col-xl-5 {
 				-ms-flex:  0 0 41.666667%;
 				flex:      0 0 41.666667%;
 				max-width: 41.666667%;
 			}
 
-			> .ds-col-xl-6 {
+			.ds-col-xl-6 {
 				-ms-flex:  0 0 50%;
 				flex:      0 0 50%;
 				max-width: 50%;
 			}
 
-			> .ds-col-xl-7 {
+			.ds-col-xl-7 {
 				-ms-flex:  0 0 58.333333%;
 				flex:      0 0 58.333333%;
 				max-width: 58.333333%;
 			}
 
-			> .ds-col-xl-8 {
+			.ds-col-xl-8 {
 				-ms-flex:  0 0 66.666667%;
 				flex:      0 0 66.666667%;
 				max-width: 66.666667%;
 			}
 
-			> .ds-col-xl-9 {
+			.ds-col-xl-9 {
 				-ms-flex:  0 0 75%;
 				flex:      0 0 75%;
 				max-width: 75%;
 			}
 
-			> .ds-col-xl-10 {
+			.ds-col-xl-10 {
 				-ms-flex:  0 0 83.333333%;
 				flex:      0 0 83.333333%;
 				max-width: 83.333333%;
 			}
 
-			> .ds-col-xl-11 {
+			.ds-col-xl-11 {
 				-ms-flex:  0 0 91.666667%;
 				flex:      0 0 91.666667%;
 				max-width: 91.666667%;
 			}
 
-			> .ds-col-xl-12 {
+			.ds-col-xl-12 {
 				-ms-flex:  0 0 100%;
 				flex:      0 0 100%;
 				max-width: 100%;
@@ -483,75 +495,75 @@
 ██████  ███████        ██████  ███████  ██████  ██████  ██   ██ ███████   ███ ███  ██ ██████     ██    ██   ██      ██   ██ ██   ██ ███████
 */
 @media ( min-width: $ds-global-width-xxl ) {
-	.ds-wrapper {
+	.ds-container {
 		.ds-row {
-			> .ds-col-xxl-1 {
+			.ds-col-xxl-1 {
 				-ms-flex:  0 0 8.333333%;
 				flex:      0 0 8.333333%;
 				max-width: 8.333333%;
 			}
 
-			> .ds-col-xxl-2 {
+			.ds-col-xxl-2 {
 				-ms-flex:  0 0 16.666667%;
 				flex:      0 0 16.666667%;
 				max-width: 16.666667%;
 			}
 
-			> .ds-col-xxl-3 {
+			.ds-col-xxl-3 {
 				-ms-flex:  0 0 25%;
 				flex:      0 0 25%;
 				max-width: 25%;
 			}
 
-			> .ds-col-xxl-4 {
+			.ds-col-xxl-4 {
 				-ms-flex:  0 0 33.333333%;
 				flex:      0 0 33.333333%;
 				max-width: 33.333333%;
 			}
 
-			> .ds-col-xxl-5 {
+			.ds-col-xxl-5 {
 				-ms-flex:  0 0 41.666667%;
 				flex:      0 0 41.666667%;
 				max-width: 41.666667%;
 			}
 
-			> .ds-col-xxl-6 {
+			.ds-col-xxl-6 {
 				-ms-flex:  0 0 50%;
 				flex:      0 0 50%;
 				max-width: 50%;
 			}
 
-			> .ds-col-xxl-7 {
+			.ds-col-xxl-7 {
 				-ms-flex:  0 0 58.333333%;
 				flex:      0 0 58.333333%;
 				max-width: 58.333333%;
 			}
 
-			> .ds-col-xxl-8 {
+			.ds-col-xxl-8 {
 				-ms-flex:  0 0 66.666667%;
 				flex:      0 0 66.666667%;
 				max-width: 66.666667%;
 			}
 
-			> .ds-col-xxl-9 {
+			.ds-col-xxl-9 {
 				-ms-flex:  0 0 75%;
 				flex:      0 0 75%;
 				max-width: 75%;
 			}
 
-			> .ds-col-xxl-10 {
+			.ds-col-xxl-10 {
 				-ms-flex:  0 0 83.333333%;
 				flex:      0 0 83.333333%;
 				max-width: 83.333333%;
 			}
 
-			> .ds-col-xxl-11 {
+			.ds-col-xxl-11 {
 				-ms-flex:  0 0 91.666667%;
 				flex:      0 0 91.666667%;
 				max-width: 91.666667%;
 			}
 
-			> .ds-col-xxl-12 {
+			.ds-col-xxl-12 {
 				-ms-flex:  0 0 100%;
 				flex:      0 0 100%;
 				max-width: 100%;

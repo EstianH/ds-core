@@ -67,11 +67,30 @@ class DS_CORE {
 	 * Constructor.
 	 *
 	 * @access private
-	 * @uses definition DSC_ROOT The DS Core root folder path.
 	 */
 	private function __construct() {
 		if ( is_admin() )
 			require_once DSC_ROOT . 'admin/inc/class-admin.php';
+		else {
+			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_assets_maybe' ) );
+		}
+	}
+
+	/**
+	 * Maybe Enqueue DS Core assets.
+	 *
+	 * @access public
+	 */
+	public function enqueue_assets_maybe() {
+		$dsc_settings = get_option( 'dsc_settings' );
+
+		if ( !empty( $dsc_settings['frontend']['include'] ) ) {
+			wp_enqueue_style (  'dsc-style',  DSC_ASSETS . 'css/style.css', array(), DSC_VERSION );
+			wp_enqueue_script ( 'dsc-script', DSC_ASSETS . 'js/script.js',	array(), DSC_VERSION );
+		}
+
+		if ( !empty( $dsc_settings['avada']['include'] ) )
+			wp_enqueue_style (  'dsc-avada-column-overrides',  DSC_ASSETS . 'css/avada-column-overrides.css', array(), DSC_VERSION );
 	}
 }
 

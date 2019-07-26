@@ -54,7 +54,6 @@ class DS_CORE_ADMIN {
 	 * Constructor.
 	 *
 	 * @access private
-	 * @uses definition DSC_BASENAME The plugin basename.
 	 */
 	private function __construct() {
 		$this->capability = 'edit_plugins';
@@ -73,7 +72,7 @@ class DS_CORE_ADMIN {
 		add_filter( 'plugin_action_links_' . DSC_BASENAME, array( $this, 'register_plugin_action_links' ), 10, 1 ); // Add plugin list settings link.
 
 		// Register settings.
-		register_setting( 'dsc-settings', 'dsc-settings' );
+		register_setting( 'dsc_settings', 'dsc_settings' );
 
 		// Register notifications.
 		add_action( 'admin_notices', array( $this, 'add_notices' ) );
@@ -84,8 +83,6 @@ class DS_CORE_ADMIN {
 	 *
 	 * @access public
 	 * @uses $GLOBALS
-	 * @uses definition DSC_ASSETS The DS Core assets folder path.
-	 * @uses definition DSC_TITLE The DS Core plugin title.
 	 */
 	public function render_admin_menu() {
 		if( !isset( $GLOBALS['admin_page_hooks'][$this->slug] ) ) {
@@ -107,6 +104,8 @@ class DS_CORE_ADMIN {
 				$this->slug,
 				array( $this, 'load_template_settings_core' )
 			);
+
+			do_action( 'dsc_render_admin_menu_sub_items' );
 		}
 	}
 
@@ -114,8 +113,6 @@ class DS_CORE_ADMIN {
 	 * Handle plugin activation.
 	 *
 	 * @access public
-	 *
-	 * @uses definition DSC_VERSION The DS Core version.
 	 */
 	public function activate() {
 		update_option( 'dsc-version', DSC_VERSION );
@@ -134,7 +131,6 @@ class DS_CORE_ADMIN {
 	 * Update Database settings if versions differ.
 	 *
 	 * @access public
-	 * @uses definition DSC_VERSION The DS Core version.
 	 */
 	public function update_settings() {
 		if( version_compare( get_option( 'dsc-version' ), DSC_VERSION, '<' ) )
@@ -176,8 +172,6 @@ class DS_CORE_ADMIN {
 	 * Render the DS Core settings page.
 	 *
 	 * @access public
-	 * @uses   definition DSC_ROOT The DS Core root folder path.
-	 * @uses   definition DSC_ROOT The DS Core root folder path.
 	 */
 	public function load_template_settings_core() {
 		load_template( DSC_ROOT . 'admin/templates/settings-core.php' );
