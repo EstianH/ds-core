@@ -115,7 +115,7 @@ class DS_CORE_ADMIN {
 	 * @access public
 	 */
 	public function activate() {
-		update_option( 'dsc-version', DSC_VERSION );
+		update_option( 'dsc_version', DSC_VERSION );
 	}
 
 	/**
@@ -133,7 +133,7 @@ class DS_CORE_ADMIN {
 	 * @access public
 	 */
 	public function update_settings() {
-		if( version_compare( get_option( 'dsc-version' ), DSC_VERSION, '<' ) )
+		if( version_compare( get_option( 'dsc_version' ), DSC_VERSION, '<' ) )
 			$this->activate();
 	}
 
