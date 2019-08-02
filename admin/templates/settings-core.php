@@ -50,6 +50,7 @@ $current_theme = wp_get_theme();
 										</div>
 										<div class="ds-col-12 ds-col-lg-9">
 											<input
+												class="ds-input-box"
 												name="dsc_settings[frontend][gutter-size]"
 												type="text"
 												value="<?php echo ( !empty( $dsc_settings['frontend']['gutter-size'] ) ? $dsc_settings['frontend']['gutter-size'] : ''); ?>"
@@ -57,75 +58,15 @@ $current_theme = wp_get_theme();
 										</div>
 									</div>
 								</div>
-								<div class="ds-mt-2">
-									<?php submit_button( '', 'button-primary', '', false ); ?>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<?php
-				/*
-				 █████  ██    ██  █████  ██████   █████
-				██   ██ ██    ██ ██   ██ ██   ██ ██   ██
-				███████ ██    ██ ███████ ██   ██ ███████
-				██   ██  ██  ██  ██   ██ ██   ██ ██   ██
-				██   ██   ████   ██   ██ ██████  ██   ██
-				*/
-				?>
-				<?php if ( 'Avada' === $current_theme->template ) { ?>
-					<div class="ds-row">
-						<div class="ds-col ds-mb-2">
-							<div class="ds-block">
-								<div class="ds-block-title">
-									<h2 class="ds-mt-0 ds-mb-0">
-										<span class="dashicons dashicons-admin-settings"></span>
-										<?php _e( $current_theme->template . ' Settings', 'ds-core' ); ?>
-									</h2>
-								</div>
-								<div class="ds-block-body">
-									<div class="ds-block-toggler<?php echo ( !empty( $dsc_settings['avada']['include'] ) ? ' active' : ''); ?>">
-										<div class="ds-row">
-											<div class="ds-col-12 ds-col-lg-3">
-												<strong><?php _e( 'Include the DS Core stylesheet & script on your website.', 'ds-core' ); ?></strong>
-											</div>
-											<div class="ds-col-12 ds-col-lg-9">
-												<label class="ds-toggler ds-mb-2">
-													<input
-														class="ds-block-toggler-input"
-														name="dsc_settings[avada][include]"
-														type="checkbox"
-														value="1"
-														<?php echo ( !empty( $dsc_settings['avada']['include'] ) ? 'checked="checked"' : ''); ?> />
-														<span></span>
-												</label>
-											</div>
-										</div>
-									</div>
-									<div class="ds-block-toggler-block">
-										<div class="ds-row ds-mt-2">
-											<div class="ds-col-12 ds-col-lg-3">
-												<label>
-													<strong><?php _e( 'Label Text:', 'ds-core' ); ?></strong><br />
-												</label>
-											</div>
-											<div class="ds-col-12 ds-col-lg-9">
-												<input
-													name="dsc_settings[avada][text]"
-													type="text"
-													value="<?php echo ( !empty( $dsc_settings['avada']['text'] ) ? $dsc_settings['avada']['text'] : ''); ?>"
-													placeholder="Avada setting" />
-											</div>
-										</div>
-									</div>
-									<div class="ds-mt-2">
+								<div class="ds-row ds-mt-2">
+									<div class="ds-col-12">
 										<?php submit_button( '', 'button-primary', '', false ); ?>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				<?php } ?>
+				</div>
 			</form>
 			<?php
 			/*

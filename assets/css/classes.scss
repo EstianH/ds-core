@@ -178,8 +178,120 @@
 			}
 		}
 	}
-}
+} // .ds-toggler
 
+.ds-checkbox {
+	> input {
+		display: none;
+
+		& + span {
+			&:before {
+				transition: background 0.2s;
+				content: "";
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 18px;
+				width: 20px;
+				height: 20px;
+				background-color: $ds-grey;
+				@include ds-border-radius( 2px );
+				padding-right: 1px; // seems offcenter without this padding.
+				box-sizing: border-box;
+				border: 0;
+			}
+		}
+
+		&:checked {
+			& + span {
+				font-family: dashicons;
+
+				&:before {
+					content: "\f147";
+					background-color: $ds-grey-dark;
+					color: $white;
+				}
+			}
+		}
+	}
+
+	&.ds-input-lg {
+		> input {
+			& + span {
+				&:before {
+					width: 40px;
+					height: 40px;
+					font-size: 35px;
+					padding-right: 2px; // seems offcenter without this padding.
+				}
+			}
+		}
+	}
+} // .ds-checkbox
+
+.ds-radio {
+	> input {
+		display: none;
+
+		& + span {
+			&:before {
+				transition: border 0.2s;
+				content: "";
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 20px;
+				height: 20px;
+				background-color: $ds-grey;
+				@include ds-border-radius( 50% );
+				box-sizing: border-box;
+			}
+		}
+
+		&:checked {
+			& + span {
+				&:before {
+					border: 5px solid $ds-grey-dark;
+				}
+			}
+		}
+	}
+
+	&.ds-input-lg {
+		> input {
+			& + span {
+				&:before {
+					width: 40px;
+					height: 40px;
+				}
+			}
+
+			&:checked {
+				& + span {
+					&:before {
+						border: 10px solid $ds-grey-dark;
+					}
+				}
+			}
+		}
+	}
+} // .da-radio
+
+input {
+	&:not( [type="checkbox"] ):not( [type="radio"] ) {
+		&.ds-input-box {
+			padding: 5px;
+			@include ds-border-radius( 2px );
+			@include ds-dimensions( 100%, auto );
+			border: 0;
+			background: #f9f9f9;
+		}
+	}
+}
 
 /*
 ██████  ███████        ██████  ██       ██████  ██████   █████  ██       ██     ██ ██ ██████  ████████ ██   ██       ███████ ███    ███
