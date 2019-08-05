@@ -6,7 +6,7 @@ $current_theme = wp_get_theme();
 
 ?>
 <div class="ds-admin-wrapper">
-	<h1 class="ds-pb-2"><?php echo DSC_TITLE; ?></h1>
+	<h1 class=""><?php echo DSC_TITLE; ?></h1>
 	<div class="wrap ds-mt-0">
 		<h2 class="ds-pt-0 ds-pb-0"></h2><!-- WP Notices render after the first <h2> tag in class="wrap" -->
 		<form method="post" action="options.php">
@@ -23,7 +23,7 @@ $current_theme = wp_get_theme();
 							</div>
 							<div class="ds-block-body">
 								<div class="ds-block-toggler<?php echo ( !empty( $dsc_settings['frontend']['include'] ) ? ' active' : ''); ?>">
-									<div class="ds-row">
+									<div class="ds-row ds-mb-2">
 										<div class="ds-col-12 ds-col-lg-3">
 											<strong><?php _e( 'Include the DS Core stylesheet & script on your website.', 'ds-core' ); ?></strong>
 										</div>
@@ -41,7 +41,7 @@ $current_theme = wp_get_theme();
 									</div>
 								</div>
 								<div class="ds-block-toggler-block">
-									<div class="ds-row ds-mt-2">
+									<div class="ds-row">
 										<div class="ds-col-12 ds-col-lg-3">
 											<label>
 												<strong><?php _e( 'Column Gutter Size:', 'ds-core' ); ?></strong><br />
@@ -58,7 +58,7 @@ $current_theme = wp_get_theme();
 										</div>
 									</div>
 								</div>
-								<div class="ds-row ds-mt-2">
+								<div class="ds-row">
 									<div class="ds-col-12">
 										<?php submit_button( '', 'button-primary', '', false ); ?>
 									</div>
