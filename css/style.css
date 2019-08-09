@@ -25,19 +25,15 @@ Author URI:  https://www.divspot.co.za
 ██   ██ ██   ██ ██  ██  ██ ██ ██  ██ ██
 ██   ██ ██████  ██      ██ ██ ██   ████
 */
-.ds-admin-wrapper {
-  max-width: 1200px;
-  height: 100%;
-  width: 100%; }
-  .ds-admin-wrapper h1, .ds-admin-wrapper h2, .ds-admin-wrapper h3,
-  .ds-admin-wrapper p {
-    color: #515151; }
-  .ds-admin-wrapper .nav-tab-wrapper > a {
-    text-decoration: none; }
-  .ds-admin-wrapper .nav-tab-wrapper .tab-content {
-    display: none; }
-    .ds-admin-wrapper .nav-tab-wrapper .tab-content.active {
-      display: block; }
+.ds-admin-wrapper h1, .ds-admin-wrapper h2, .ds-admin-wrapper h3,
+.ds-admin-wrapper p {
+  color: #515151; }
+.ds-admin-wrapper .nav-tab-wrapper > a {
+  text-decoration: none; }
+.ds-admin-wrapper .nav-tab-wrapper .tab-content {
+  display: none; }
+  .ds-admin-wrapper .nav-tab-wrapper .tab-content.active {
+    display: block; }
 
 /*
 ██████   ██████  ██     ██ ███████                ██████  ██████  ██      ██    ██ ███    ███ ███    ██ ███████
@@ -49,104 +45,106 @@ Author URI:  https://www.divspot.co.za
 .ds-container {
   padding-left: 7.5px;
   padding-right: 7.5px; }
-  .ds-container * {
+
+.ds-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -7.5px;
+  margin-right: -7.5px; }
+  .ds-row * {
     box-sizing: border-box; }
-    .ds-container *:focus {
+    .ds-row *:focus {
       outline: none; }
-  .ds-container .ds-row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-left: -7.5px;
-    margin-right: -7.5px; }
-    .ds-container .ds-row .ds-col {
-      -ms-flex-preferred-size: 0;
-      flex-basis: 0;
-      -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-      flex-grow: 1;
-      max-width: 100%;
-      padding-left: 7.5px;
-      padding-right: 7.5px; }
-    .ds-container .ds-row .ds-col-1,
-    .ds-container .ds-row .ds-col-2,
-    .ds-container .ds-row .ds-col-3,
-    .ds-container .ds-row .ds-col-4,
-    .ds-container .ds-row .ds-col-5,
-    .ds-container .ds-row .ds-col-6,
-    .ds-container .ds-row .ds-col-7,
-    .ds-container .ds-row .ds-col-8,
-    .ds-container .ds-row .ds-col-9,
-    .ds-container .ds-row .ds-col-10,
-    .ds-container .ds-row .ds-col-11,
-    .ds-container .ds-row .ds-col-12 {
-      -webkit-box-flex: 0;
-      padding-left: 7.5px;
-      padding-right: 7.5px; }
-    .ds-container .ds-row .ds-col-1 {
-      -ms-flex: 0 0 8.333333%;
-      flex: 0 0 8.333333%;
-      max-width: 8.333333%; }
-    .ds-container .ds-row .ds-col-2 {
-      -ms-flex: 0 0 16.666667%;
-      flex: 0 0 16.666667%;
-      max-width: 16.666667%; }
-    .ds-container .ds-row .ds-col-3 {
-      -ms-flex: 0 0 25%;
-      flex: 0 0 25%;
-      max-width: 25%; }
-    .ds-container .ds-row .ds-col-4 {
-      -ms-flex: 0 0 33.333333%;
-      flex: 0 0 33.333333%;
-      max-width: 33.333333%; }
-    .ds-container .ds-row .ds-col-5 {
-      -ms-flex: 0 0 41.666667%;
-      flex: 0 0 41.666667%;
-      max-width: 41.666667%; }
-    .ds-container .ds-row .ds-col-6 {
-      -ms-flex: 0 0 50%;
-      flex: 0 0 50%;
-      max-width: 50%; }
-    .ds-container .ds-row .ds-col-7 {
-      -ms-flex: 0 0 58.333333%;
-      flex: 0 0 58.333333%;
-      max-width: 58.333333%; }
-    .ds-container .ds-row .ds-col-8 {
-      -ms-flex: 0 0 66.666667%;
-      flex: 0 0 66.666667%;
-      max-width: 66.666667%; }
-    .ds-container .ds-row .ds-col-9 {
-      -ms-flex: 0 0 75%;
-      flex: 0 0 75%;
-      max-width: 75%; }
-    .ds-container .ds-row .ds-col-10 {
-      -ms-flex: 0 0 83.333333%;
-      flex: 0 0 83.333333%;
-      max-width: 83.333333%; }
-    .ds-container .ds-row .ds-col-11 {
-      -ms-flex: 0 0 91.666667%;
-      flex: 0 0 91.666667%;
-      max-width: 91.666667%; }
-    .ds-container .ds-row .ds-col-12 {
-      -ms-flex: 0 0 100%;
-      flex: 0 0 100%;
-      max-width: 100%; }
-    .ds-container .ds-row .ds-block {
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
-      background: #fff;
-      height: 100%;
-      width: 100%; }
-      .ds-container .ds-row .ds-block > .ds-block-title {
-        background: #f9f9f9;
-        display: block;
-        padding: 15px; }
-        .ds-container .ds-row .ds-block > .ds-block-title > h2 {
-          color: #515151;
-          line-height: 1.1em; }
-      .ds-container .ds-row .ds-block > .ds-block-body {
-        padding: 15px; }
+  .ds-row .ds-col {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    padding-left: 7.5px;
+    padding-right: 7.5px; }
+  .ds-row .ds-col-1,
+  .ds-row .ds-col-2,
+  .ds-row .ds-col-3,
+  .ds-row .ds-col-4,
+  .ds-row .ds-col-5,
+  .ds-row .ds-col-6,
+  .ds-row .ds-col-7,
+  .ds-row .ds-col-8,
+  .ds-row .ds-col-9,
+  .ds-row .ds-col-10,
+  .ds-row .ds-col-11,
+  .ds-row .ds-col-12 {
+    -webkit-box-flex: 0;
+    padding-left: 7.5px;
+    padding-right: 7.5px; }
+  .ds-row .ds-col-1 {
+    -ms-flex: 0 0 8.333333%;
+    flex: 0 0 8.333333%;
+    max-width: 8.333333%; }
+  .ds-row .ds-col-2 {
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%; }
+  .ds-row .ds-col-3 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%; }
+  .ds-row .ds-col-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%; }
+  .ds-row .ds-col-5 {
+    -ms-flex: 0 0 41.666667%;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%; }
+  .ds-row .ds-col-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%; }
+  .ds-row .ds-col-7 {
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%; }
+  .ds-row .ds-col-8 {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%; }
+  .ds-row .ds-col-9 {
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%; }
+  .ds-row .ds-col-10 {
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%; }
+  .ds-row .ds-col-11 {
+    -ms-flex: 0 0 91.666667%;
+    flex: 0 0 91.666667%;
+    max-width: 91.666667%; }
+  .ds-row .ds-col-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%; }
+  .ds-row .ds-block {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    background: #fff;
+    height: 100%;
+    width: 100%; }
+    .ds-row .ds-block > .ds-block-title {
+      background: #f9f9f9;
+      display: block;
+      padding: 15px; }
+      .ds-row .ds-block > .ds-block-title > h2 {
+        color: #515151;
+        line-height: 1.1em;
+        margin: 0; }
+    .ds-row .ds-block > .ds-block-body {
+      padding: 15px; }
 
 /*
 ██████  ███████        ██████  ██       ██████  ██████   █████  ██       ██     ██ ██ ██████  ████████ ██   ██       ███████ ███    ███
@@ -156,51 +154,51 @@ Author URI:  https://www.divspot.co.za
 ██████  ███████        ██████  ███████  ██████  ██████  ██   ██ ███████   ███ ███  ██ ██████     ██    ██   ██       ███████ ██      ██
 */
 @media (min-width: 576px) {
-  .ds-container .ds-row .ds-col-sm-1 {
+  .ds-row .ds-col-sm-1 {
     -ms-flex: 0 0 8.333333%;
     flex: 0 0 8.333333%;
     max-width: 8.333333%; }
-  .ds-container .ds-row .ds-col-sm-2 {
+  .ds-row .ds-col-sm-2 {
     -ms-flex: 0 0 16.666667%;
     flex: 0 0 16.666667%;
     max-width: 16.666667%; }
-  .ds-container .ds-row .ds-col-sm-3 {
+  .ds-row .ds-col-sm-3 {
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
     max-width: 25%; }
-  .ds-container .ds-row .ds-col-sm-4 {
+  .ds-row .ds-col-sm-4 {
     -ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;
     max-width: 33.333333%; }
-  .ds-container .ds-row .ds-col-sm-5 {
+  .ds-row .ds-col-sm-5 {
     -ms-flex: 0 0 41.666667%;
     flex: 0 0 41.666667%;
     max-width: 41.666667%; }
-  .ds-container .ds-row .ds-col-sm-6 {
+  .ds-row .ds-col-sm-6 {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%; }
-  .ds-container .ds-row .ds-col-sm-7 {
+  .ds-row .ds-col-sm-7 {
     -ms-flex: 0 0 58.333333%;
     flex: 0 0 58.333333%;
     max-width: 58.333333%; }
-  .ds-container .ds-row .ds-col-sm-8 {
+  .ds-row .ds-col-sm-8 {
     -ms-flex: 0 0 66.666667%;
     flex: 0 0 66.666667%;
     max-width: 66.666667%; }
-  .ds-container .ds-row .ds-col-sm-9 {
+  .ds-row .ds-col-sm-9 {
     -ms-flex: 0 0 75%;
     flex: 0 0 75%;
     max-width: 75%; }
-  .ds-container .ds-row .ds-col-sm-10 {
+  .ds-row .ds-col-sm-10 {
     -ms-flex: 0 0 83.333333%;
     flex: 0 0 83.333333%;
     max-width: 83.333333%; }
-  .ds-container .ds-row .ds-col-sm-11 {
+  .ds-row .ds-col-sm-11 {
     -ms-flex: 0 0 91.666667%;
     flex: 0 0 91.666667%;
     max-width: 91.666667%; }
-  .ds-container .ds-row .ds-col-sm-12 {
+  .ds-row .ds-col-sm-12 {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%; } }
@@ -212,51 +210,51 @@ Author URI:  https://www.divspot.co.za
 ██████  ███████        ██████  ███████  ██████  ██████  ██   ██ ███████   ███ ███  ██ ██████     ██    ██   ██       ██      ██ ██████
 */
 @media (min-width: 768px) {
-  .ds-container .ds-row .ds-col-md-1 {
+  .ds-row .ds-col-md-1 {
     -ms-flex: 0 0 8.333333%;
     flex: 0 0 8.333333%;
     max-width: 8.333333%; }
-  .ds-container .ds-row .ds-col-md-2 {
+  .ds-row .ds-col-md-2 {
     -ms-flex: 0 0 16.666667%;
     flex: 0 0 16.666667%;
     max-width: 16.666667%; }
-  .ds-container .ds-row .ds-col-md-3 {
+  .ds-row .ds-col-md-3 {
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
     max-width: 25%; }
-  .ds-container .ds-row .ds-col-md-4 {
+  .ds-row .ds-col-md-4 {
     -ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;
     max-width: 33.333333%; }
-  .ds-container .ds-row .ds-col-md-5 {
+  .ds-row .ds-col-md-5 {
     -ms-flex: 0 0 41.666667%;
     flex: 0 0 41.666667%;
     max-width: 41.666667%; }
-  .ds-container .ds-row .ds-col-md-6 {
+  .ds-row .ds-col-md-6 {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%; }
-  .ds-container .ds-row .ds-col-md-7 {
+  .ds-row .ds-col-md-7 {
     -ms-flex: 0 0 58.333333%;
     flex: 0 0 58.333333%;
     max-width: 58.333333%; }
-  .ds-container .ds-row .ds-col-md-8 {
+  .ds-row .ds-col-md-8 {
     -ms-flex: 0 0 66.666667%;
     flex: 0 0 66.666667%;
     max-width: 66.666667%; }
-  .ds-container .ds-row .ds-col-md-9 {
+  .ds-row .ds-col-md-9 {
     -ms-flex: 0 0 75%;
     flex: 0 0 75%;
     max-width: 75%; }
-  .ds-container .ds-row .ds-col-md-10 {
+  .ds-row .ds-col-md-10 {
     -ms-flex: 0 0 83.333333%;
     flex: 0 0 83.333333%;
     max-width: 83.333333%; }
-  .ds-container .ds-row .ds-col-md-11 {
+  .ds-row .ds-col-md-11 {
     -ms-flex: 0 0 91.666667%;
     flex: 0 0 91.666667%;
     max-width: 91.666667%; }
-  .ds-container .ds-row .ds-col-md-12 {
+  .ds-row .ds-col-md-12 {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%; } }
@@ -268,51 +266,51 @@ Author URI:  https://www.divspot.co.za
 ██████  ███████        ██████  ███████  ██████  ██████  ██   ██ ███████   ███ ███  ██ ██████     ██    ██   ██       ███████  ██████
 */
 @media (min-width: 992px) {
-  .ds-container .ds-row .ds-col-lg-1 {
+  .ds-row .ds-col-lg-1 {
     -ms-flex: 0 0 8.333333%;
     flex: 0 0 8.333333%;
     max-width: 8.333333%; }
-  .ds-container .ds-row .ds-col-lg-2 {
+  .ds-row .ds-col-lg-2 {
     -ms-flex: 0 0 16.666667%;
     flex: 0 0 16.666667%;
     max-width: 16.666667%; }
-  .ds-container .ds-row .ds-col-lg-3 {
+  .ds-row .ds-col-lg-3 {
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
     max-width: 25%; }
-  .ds-container .ds-row .ds-col-lg-4 {
+  .ds-row .ds-col-lg-4 {
     -ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;
     max-width: 33.333333%; }
-  .ds-container .ds-row .ds-col-lg-5 {
+  .ds-row .ds-col-lg-5 {
     -ms-flex: 0 0 41.666667%;
     flex: 0 0 41.666667%;
     max-width: 41.666667%; }
-  .ds-container .ds-row .ds-col-lg-6 {
+  .ds-row .ds-col-lg-6 {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%; }
-  .ds-container .ds-row .ds-col-lg-7 {
+  .ds-row .ds-col-lg-7 {
     -ms-flex: 0 0 58.333333%;
     flex: 0 0 58.333333%;
     max-width: 58.333333%; }
-  .ds-container .ds-row .ds-col-lg-8 {
+  .ds-row .ds-col-lg-8 {
     -ms-flex: 0 0 66.666667%;
     flex: 0 0 66.666667%;
     max-width: 66.666667%; }
-  .ds-container .ds-row .ds-col-lg-9 {
+  .ds-row .ds-col-lg-9 {
     -ms-flex: 0 0 75%;
     flex: 0 0 75%;
     max-width: 75%; }
-  .ds-container .ds-row .ds-col-lg-10 {
+  .ds-row .ds-col-lg-10 {
     -ms-flex: 0 0 83.333333%;
     flex: 0 0 83.333333%;
     max-width: 83.333333%; }
-  .ds-container .ds-row .ds-col-lg-11 {
+  .ds-row .ds-col-lg-11 {
     -ms-flex: 0 0 91.666667%;
     flex: 0 0 91.666667%;
     max-width: 91.666667%; }
-  .ds-container .ds-row .ds-col-lg-12 {
+  .ds-row .ds-col-lg-12 {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%; } }
@@ -324,51 +322,51 @@ Author URI:  https://www.divspot.co.za
 ██████  ███████        ██████  ███████  ██████  ██████  ██   ██ ███████   ███ ███  ██ ██████     ██    ██   ██      ██   ██ ███████
 */
 @media (min-width: 1200px) {
-  .ds-container .ds-row .ds-col-xl-1 {
+  .ds-row .ds-col-xl-1 {
     -ms-flex: 0 0 8.333333%;
     flex: 0 0 8.333333%;
     max-width: 8.333333%; }
-  .ds-container .ds-row .ds-col-xl-2 {
+  .ds-row .ds-col-xl-2 {
     -ms-flex: 0 0 16.666667%;
     flex: 0 0 16.666667%;
     max-width: 16.666667%; }
-  .ds-container .ds-row .ds-col-xl-3 {
+  .ds-row .ds-col-xl-3 {
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
     max-width: 25%; }
-  .ds-container .ds-row .ds-col-xl-4 {
+  .ds-row .ds-col-xl-4 {
     -ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;
     max-width: 33.333333%; }
-  .ds-container .ds-row .ds-col-xl-5 {
+  .ds-row .ds-col-xl-5 {
     -ms-flex: 0 0 41.666667%;
     flex: 0 0 41.666667%;
     max-width: 41.666667%; }
-  .ds-container .ds-row .ds-col-xl-6 {
+  .ds-row .ds-col-xl-6 {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%; }
-  .ds-container .ds-row .ds-col-xl-7 {
+  .ds-row .ds-col-xl-7 {
     -ms-flex: 0 0 58.333333%;
     flex: 0 0 58.333333%;
     max-width: 58.333333%; }
-  .ds-container .ds-row .ds-col-xl-8 {
+  .ds-row .ds-col-xl-8 {
     -ms-flex: 0 0 66.666667%;
     flex: 0 0 66.666667%;
     max-width: 66.666667%; }
-  .ds-container .ds-row .ds-col-xl-9 {
+  .ds-row .ds-col-xl-9 {
     -ms-flex: 0 0 75%;
     flex: 0 0 75%;
     max-width: 75%; }
-  .ds-container .ds-row .ds-col-xl-10 {
+  .ds-row .ds-col-xl-10 {
     -ms-flex: 0 0 83.333333%;
     flex: 0 0 83.333333%;
     max-width: 83.333333%; }
-  .ds-container .ds-row .ds-col-xl-11 {
+  .ds-row .ds-col-xl-11 {
     -ms-flex: 0 0 91.666667%;
     flex: 0 0 91.666667%;
     max-width: 91.666667%; }
-  .ds-container .ds-row .ds-col-xl-12 {
+  .ds-row .ds-col-xl-12 {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%; } }
@@ -380,51 +378,51 @@ Author URI:  https://www.divspot.co.za
 ██████  ███████        ██████  ███████  ██████  ██████  ██   ██ ███████   ███ ███  ██ ██████     ██    ██   ██      ██   ██ ██   ██ ███████
 */
 @media (min-width: 1680px) {
-  .ds-container .ds-row .ds-col-xxl-1 {
+  .ds-row .ds-col-xxl-1 {
     -ms-flex: 0 0 8.333333%;
     flex: 0 0 8.333333%;
     max-width: 8.333333%; }
-  .ds-container .ds-row .ds-col-xxl-2 {
+  .ds-row .ds-col-xxl-2 {
     -ms-flex: 0 0 16.666667%;
     flex: 0 0 16.666667%;
     max-width: 16.666667%; }
-  .ds-container .ds-row .ds-col-xxl-3 {
+  .ds-row .ds-col-xxl-3 {
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
     max-width: 25%; }
-  .ds-container .ds-row .ds-col-xxl-4 {
+  .ds-row .ds-col-xxl-4 {
     -ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;
     max-width: 33.333333%; }
-  .ds-container .ds-row .ds-col-xxl-5 {
+  .ds-row .ds-col-xxl-5 {
     -ms-flex: 0 0 41.666667%;
     flex: 0 0 41.666667%;
     max-width: 41.666667%; }
-  .ds-container .ds-row .ds-col-xxl-6 {
+  .ds-row .ds-col-xxl-6 {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%; }
-  .ds-container .ds-row .ds-col-xxl-7 {
+  .ds-row .ds-col-xxl-7 {
     -ms-flex: 0 0 58.333333%;
     flex: 0 0 58.333333%;
     max-width: 58.333333%; }
-  .ds-container .ds-row .ds-col-xxl-8 {
+  .ds-row .ds-col-xxl-8 {
     -ms-flex: 0 0 66.666667%;
     flex: 0 0 66.666667%;
     max-width: 66.666667%; }
-  .ds-container .ds-row .ds-col-xxl-9 {
+  .ds-row .ds-col-xxl-9 {
     -ms-flex: 0 0 75%;
     flex: 0 0 75%;
     max-width: 75%; }
-  .ds-container .ds-row .ds-col-xxl-10 {
+  .ds-row .ds-col-xxl-10 {
     -ms-flex: 0 0 83.333333%;
     flex: 0 0 83.333333%;
     max-width: 83.333333%; }
-  .ds-container .ds-row .ds-col-xxl-11 {
+  .ds-row .ds-col-xxl-11 {
     -ms-flex: 0 0 91.666667%;
     flex: 0 0 91.666667%;
     max-width: 91.666667%; }
-  .ds-container .ds-row .ds-col-xxl-12 {
+  .ds-row .ds-col-xxl-12 {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%; } }
@@ -696,7 +694,7 @@ Author URI:  https://www.divspot.co.za
 .ds-danger {
   background-color: #D0021B; }
 
-.ds-block-toggler + .ds-block-toggler-block:after {
+.ds-block-toggler + .ds-block-toggler-block:not(.border-0):after {
   content: "";
   display: block;
   padding-bottom: 15px;
@@ -814,6 +812,30 @@ input:not([type="checkbox"]):not([type="radio"]).ds-input-box {
   width: 100%;
   border: 0;
   background: #f9f9f9; }
+
+.ds-tab-nav-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .ds-tab-nav-wrapper > .ds-tab-nav {
+    transition: all 0.4s;
+    padding: 10px 15px;
+    background: #f9f9f9;
+    color: #515151;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-transform: uppercase;
+    text-decoration: none; }
+    .ds-tab-nav-wrapper > .ds-tab-nav.active {
+      background: #515151;
+      color: #fff; }
+
+.ds-tab-content:not(.active) {
+  display: none; }
 
 /*
 ██████  ███████        ██████  ██       ██████  ██████   █████  ██       ██     ██ ██ ██████  ████████ ██   ██       ███████ ███    ███

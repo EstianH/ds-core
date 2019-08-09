@@ -11,10 +11,10 @@ Author:      divSpot
 Author URI:  https://www.divspot.co.za
 */
 
-$ds-global-width-sm: 576px; // Bootstrap 4: 576px
-$ds-global-width-md: 768px; // Bootstrap 4: 768px
-$ds-global-width-lg: 992px; // Bootstrap 4: 992px
-$ds-global-width-xl: 1200px; // Bootstrap 4: 1200px
+$ds-global-width-sm:   576px; // Bootstrap 4: 576px
+$ds-global-width-md:   768px; // Bootstrap 4: 768px
+$ds-global-width-lg:   992px; // Bootstrap 4: 992px
+$ds-global-width-xl:  1200px; // Bootstrap 4: 1200px
 $ds-global-width-xxl: 1680px; // DS Frame: 1680px
 
 $ds-grey-light: #f9f9f9;
@@ -47,30 +47,7 @@ $ds-line-height: 18px;
 ██   ██ ██   ██ ██  ██  ██ ██ ██  ██ ██
 ██   ██ ██████  ██      ██ ██ ██   ████
 */
-.ds-admin-wrapper {
-	max-width: $ds-global-width-xl;
-	@include ds-dimensions( 100%, 100% );
-
-	h1, h2, h3,
-	p {
-		color: $ds-grey-dark;
-	}
-
-	// WP Nav tabs.
-	.nav-tab-wrapper {
-		> a {
-			text-decoration: none;
-		}
-
-		.tab-content {
-			display: none;
-
-			&.active {
-				display: block;
-			}
-		}
-	}
-}
+@import 'admin';
 
 
 /*
