@@ -138,13 +138,13 @@ Author URI:  https://www.divspot.co.za
     .ds-row .ds-block > .ds-block-title {
       background: #f9f9f9;
       display: block;
-      padding: 15px; }
+      padding: 15px 25px; }
       .ds-row .ds-block > .ds-block-title > h2 {
         color: #515151;
         line-height: 1.1em;
         margin: 0; }
     .ds-row .ds-block > .ds-block-body {
-      padding: 15px; }
+      padding: 25px; }
 
 /*
 ██████  ███████        ██████  ██       ██████  ██████   █████  ██       ██     ██ ██ ██████  ████████ ██   ██       ███████ ███    ███
@@ -619,6 +619,31 @@ Author URI:  https://www.divspot.co.za
 .ds-ml-auto {
   margin-left: auto !important; }
 
+.ds-b-0 {
+  border: 0 !important; }
+
+.ds-b {
+  border: 1px solid !important; }
+
+.ds-bt {
+  border-top: 1px solid !important; }
+
+.ds-br {
+  border-right: 1px solid !important; }
+
+.ds-bb {
+  border-bottom: 1px solid !important; }
+
+.ds-bl {
+  border-left: 1px solid !important; }
+
+[class*="ds-border"] {
+  border-color: #efefef !important; }
+  [class*="ds-border"].ds-border-light {
+    border-color: #f9f9f9 !important; }
+  [class*="ds-border"].ds-border-dark {
+    border-color: #515151 !important; }
+
 .text-left {
   text-align: left !important; }
 
@@ -694,12 +719,6 @@ Author URI:  https://www.divspot.co.za
 .ds-danger {
   background-color: #D0021B; }
 
-.ds-block-toggler + .ds-block-toggler-block:not(.border-0):after {
-  content: "";
-  display: block;
-  padding-bottom: 15px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #efefef; }
 .ds-block-toggler:not(.active) + .ds-block-toggler-block {
   display: none; }
 
@@ -802,9 +821,23 @@ Author URI:  https://www.divspot.co.za
   height: 40px; }
 .ds-radio.ds-input-lg > input:checked + span:before {
   border: 10px solid #515151; }
+.ds-radio.ds-radio-image {
+  position: relative; }
+  .ds-radio.ds-radio-image > input + img {
+    transition: opacity 0.4s;
+    opacity: 0.5;
+    object-fit: cover;
+    height: 100%;
+    width: 100%; }
+  .ds-radio.ds-radio-image > input:checked + img {
+    opacity: 1; }
 
-input:not([type="checkbox"]):not([type="radio"]).ds-input-box {
+input:not([type="checkbox"]):not([type="radio"]).ds-input-box,
+textarea.ds-input-box,
+select.ds-input-box {
   padding: 5px;
+  min-height: 30px;
+  max-height: 400px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -1030,6 +1063,24 @@ input:not([type="checkbox"]):not([type="radio"]).ds-input-box {
 
   .ds-ml-sm-auto {
     margin-left: auto !important; }
+
+  .ds-b-sm-0 {
+    border: 0 !important; }
+
+  .ds-sm-b {
+    border: 1px solid !important; }
+
+  .ds-sm-bt {
+    border-top: 1px solid !important; }
+
+  .ds-sm-br {
+    border-right: 1px solid !important; }
+
+  .ds-sm-bb {
+    border-bottom: 1px solid !important; }
+
+  .ds-sm-bl {
+    border-left: 1px solid !important; }
 
   .text-sm-left {
     text-align: left !important; }
@@ -1281,6 +1332,24 @@ input:not([type="checkbox"]):not([type="radio"]).ds-input-box {
   .ds-ml-md-auto {
     margin-left: auto !important; }
 
+  .ds-b-md-0 {
+    border: 0 !important; }
+
+  .ds-md-b {
+    border: 1px solid !important; }
+
+  .ds-md-bt {
+    border-top: 1px solid !important; }
+
+  .ds-md-br {
+    border-right: 1px solid !important; }
+
+  .ds-md-bb {
+    border-bottom: 1px solid !important; }
+
+  .ds-md-bl {
+    border-left: 1px solid !important; }
+
   .text-md-left {
     text-align: left !important; }
 
@@ -1530,6 +1599,24 @@ input:not([type="checkbox"]):not([type="radio"]).ds-input-box {
 
   .ds-ml-lg-auto {
     margin-left: auto !important; }
+
+  .ds-b-lg-0 {
+    border: 0 !important; }
+
+  .ds-lg-b {
+    border: 1px solid !important; }
+
+  .ds-lg-bt {
+    border-top: 1px solid !important; }
+
+  .ds-lg-br {
+    border-right: 1px solid !important; }
+
+  .ds-lg-bb {
+    border-bottom: 1px solid !important; }
+
+  .ds-lg-bl {
+    border-left: 1px solid !important; }
 
   .text-lg-left {
     text-align: left !important; }
@@ -1781,6 +1868,24 @@ input:not([type="checkbox"]):not([type="radio"]).ds-input-box {
   .ds-ml-xl-auto {
     margin-left: auto !important; }
 
+  .ds-b-xl-0 {
+    border: 0 !important; }
+
+  .ds-xl-b {
+    border: 1px solid !important; }
+
+  .ds-xl-bt {
+    border-top: 1px solid !important; }
+
+  .ds-xl-br {
+    border-right: 1px solid !important; }
+
+  .ds-xl-bb {
+    border-bottom: 1px solid !important; }
+
+  .ds-xl-bl {
+    border-left: 1px solid !important; }
+
   .text-xl-left {
     text-align: left !important; }
 
@@ -2030,6 +2135,24 @@ input:not([type="checkbox"]):not([type="radio"]).ds-input-box {
 
   .ds-ml-xxl-auto {
     margin-left: auto !important; }
+
+  .ds-b-xxl-0 {
+    border: 0 !important; }
+
+  .ds-xxl-b {
+    border: 1px solid !important; }
+
+  .ds-xxl-bt {
+    border-top: 1px solid !important; }
+
+  .ds-xxl-br {
+    border-right: 1px solid !important; }
+
+  .ds-xxl-bb {
+    border-bottom: 1px solid !important; }
+
+  .ds-xxl-bl {
+    border-left: 1px solid !important; }
 
   .text-xxl-left {
     text-align: left !important; }

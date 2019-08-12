@@ -128,7 +128,7 @@
 		> .ds-block-title {
 			background: $ds-grey-light;
 			display: block;
-			padding: 15px;
+			padding: 15px 25px;
 
 			> h2 {
 				color: $ds-grey-dark;
@@ -138,7 +138,7 @@
 		}
 
 		> .ds-block-body {
-			padding: 15px;
+			padding: 25px;
 		}
 	}
 }
