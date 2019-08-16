@@ -79,11 +79,11 @@
 .ds-br  {  border-right: 1px solid !important; }
 .ds-bb  { border-bottom: 1px solid !important; }
 .ds-bl  {   border-left: 1px solid !important; }
-[class*="ds-border"] {
+[class*="ds-b"] {
 	border-color: $ds-grey !important;
 
-	&.ds-border-light { border-color: $ds-grey-light !important; }
-	&.ds-border-dark  { border-color: $ds-grey-dark !important; }
+	&.ds-b-light { border-color: $ds-grey-light !important; }
+	&.ds-b-dark  { border-color: $ds-grey-dark !important; }
 }
 
 .text-left   {   text-align: left !important; }
@@ -295,7 +295,7 @@
 
 	&.ds-radio-image {
 		position: relative;
-		
+
 		> input {
 			& + img {
 				transition: opacity 0.4s;

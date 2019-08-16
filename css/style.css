@@ -637,11 +637,11 @@ Author URI:  https://www.divspot.co.za
 .ds-bl {
   border-left: 1px solid !important; }
 
-[class*="ds-border"] {
+[class*="ds-b"] {
   border-color: #efefef !important; }
-  [class*="ds-border"].ds-border-light {
+  [class*="ds-b"].ds-b-light {
     border-color: #f9f9f9 !important; }
-  [class*="ds-border"].ds-border-dark {
+  [class*="ds-b"].ds-b-dark {
     border-color: #515151 !important; }
 
 .text-left {
