@@ -644,22 +644,22 @@ Author URI:  https://www.divspot.co.za
   [class*="ds-b"].ds-b-dark {
     border-color: #515151 !important; }
 
-.text-left {
+.ds-text-left {
   text-align: left !important; }
 
-.text-center {
+.ds-text-center {
   text-align: center !important; }
 
-.text-right {
+.ds-text-right {
   text-align: right !important; }
 
-.float-left {
+.ds-float-left {
   float: left !important; }
 
-.float-right {
+.ds-float-right {
   float: right !important; }
 
-.float-none {
+.ds-float-none {
   float: none !important; }
 
 .ds-d-inline-block {
@@ -1082,22 +1082,22 @@ select.ds-input-box {
   .ds-sm-bl {
     border-left: 1px solid !important; }
 
-  .text-sm-left {
+  .ds-text-sm-left {
     text-align: left !important; }
 
-  .text-sm-center {
+  .ds-text-sm-center {
     text-align: center !important; }
 
-  .text-sm-right {
+  .ds-text-sm-right {
     text-align: right !important; }
 
-  .float-sm-left {
+  .ds-float-sm-left {
     float: left !important; }
 
-  .float-sm-right {
+  .ds-float-sm-right {
     float: right !important; }
 
-  .float-sm-none {
+  .ds-float-sm-none {
     float: none !important; }
 
   .ds-d-sm-inline-block {
@@ -1350,22 +1350,22 @@ select.ds-input-box {
   .ds-md-bl {
     border-left: 1px solid !important; }
 
-  .text-md-left {
+  .ds-text-md-left {
     text-align: left !important; }
 
-  .text-md-center {
+  .ds-text-md-center {
     text-align: center !important; }
 
-  .text-md-right {
+  .ds-text-md-right {
     text-align: right !important; }
 
-  .float-md-left {
+  .ds-float-md-left {
     float: left !important; }
 
-  .float-md-right {
+  .ds-float-md-right {
     float: right !important; }
 
-  .float-md-none {
+  .ds-float-md-none {
     float: none !important; }
 
   .ds-d-md-inline-block {
@@ -1618,22 +1618,22 @@ select.ds-input-box {
   .ds-lg-bl {
     border-left: 1px solid !important; }
 
-  .text-lg-left {
+  .ds-text-lg-left {
     text-align: left !important; }
 
-  .text-lg-center {
+  .ds-text-lg-center {
     text-align: center !important; }
 
-  .text-lg-right {
+  .ds-text-lg-right {
     text-align: right !important; }
 
-  .float-lg-left {
+  .ds-float-lg-left {
     float: left !important; }
 
-  .float-lg-right {
+  .ds-float-lg-right {
     float: right !important; }
 
-  .float-lg-none {
+  .ds-float-lg-none {
     float: none !important; }
 
   .ds-d-lg-inline-block {
@@ -1886,22 +1886,22 @@ select.ds-input-box {
   .ds-xl-bl {
     border-left: 1px solid !important; }
 
-  .text-xl-left {
+  .ds-text-xl-left {
     text-align: left !important; }
 
-  .text-xl-center {
+  .ds-text-xl-center {
     text-align: center !important; }
 
-  .text-xl-right {
+  .ds-text-xl-right {
     text-align: right !important; }
 
-  .float-xl-left {
+  .ds-float-xl-left {
     float: left !important; }
 
-  .float-xl-right {
+  .ds-float-xl-right {
     float: right !important; }
 
-  .float-xl-none {
+  .ds-float-xl-none {
     float: none !important; }
 
   .ds-d-xl-inline-block {
@@ -2154,22 +2154,22 @@ select.ds-input-box {
   .ds-xxl-bl {
     border-left: 1px solid !important; }
 
-  .text-xxl-left {
+  .ds-text-xxl-left {
     text-align: left !important; }
 
-  .text-xxl-center {
+  .ds-text-xxl-center {
     text-align: center !important; }
 
-  .text-xxl-right {
+  .ds-text-xxl-right {
     text-align: right !important; }
 
-  .float-xxl-left {
+  .ds-float-xxl-left {
     float: left !important; }
 
-  .float-xxl-right {
+  .ds-float-xxl-right {
     float: right !important; }
 
-  .float-xxl-none {
+  .ds-float-xxl-none {
     float: none !important; }
 
   .ds-d-xxl-inline-block {
