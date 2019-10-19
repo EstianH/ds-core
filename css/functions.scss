@@ -21,6 +21,7 @@
 	   -moz-transform: $transformation;
 	    -ms-transform: $transformation;
 	     -o-transform: $transformation;
+	        transform: $transformation;
 }
 
 @mixin ds-box-shadow( $box-shadow ) {
