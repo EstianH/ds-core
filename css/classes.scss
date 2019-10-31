@@ -201,7 +201,7 @@
 
 		& + span {
 			display: flex;
-			flex-wrap: wrap;
+			flex-wrap: nowrap;
 			align-items: center;
 
 			&:before {
@@ -240,8 +240,8 @@
 		> input {
 			& + span {
 				&:before {
-					width: 40px;
-					height: 40px;
+					min-width: 40px;
+					min-height: 40px;
 					font-size: 35px;
 					padding-right: 2px; // seems offcenter without this padding.
 				}
@@ -256,7 +256,7 @@
 
 		& + span {
 			display: flex;
-			flex-wrap: wrap;
+			flex-wrap: nowrap;
 			align-items: center;
 
 			&:before {
