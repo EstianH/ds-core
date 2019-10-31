@@ -194,6 +194,8 @@
 } // .ds-toggler
 
 .ds-checkbox {
+	cursor: pointer;
+
 	> input {
 		display: none;
 
@@ -253,8 +255,13 @@
 		display: none;
 
 		& + span {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+
 			&:before {
-				transition: border 0.2s;
+				transition: all 0.2s;
+				border: 0px solid $ds-grey;
 				content: "";
 				display: -webkit-box;
 				display: -ms-flexbox;
@@ -263,6 +270,7 @@
 				justify-content: center;
 				width: 20px;
 				height: 20px;
+				margin-right: 10px;
 				background-color: $ds-grey;
 				@include ds-border-radius( 50% );
 				box-sizing: border-box;
@@ -272,7 +280,8 @@
 		&:checked {
 			& + span {
 				&:before {
-					border: 5px solid $ds-grey-dark;
+					border-width: 5px;
+					border-color: $ds-grey-dark;
 				}
 			}
 		}
