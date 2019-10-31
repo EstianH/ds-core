@@ -769,30 +769,34 @@ Version:     1.1.1
 
 .ds-checkbox > input {
   display: none; }
-  .ds-checkbox > input + span:before {
-    transition: background 0.2s;
-    content: "";
-    display: -webkit-box;
-    display: -ms-flexbox;
+  .ds-checkbox > input + span {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    width: 20px;
-    height: 20px;
-    background-color: #efefef;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    padding-right: 1px;
-    box-sizing: border-box;
-    border: 0; }
-  .ds-checkbox > input:checked + span {
-    font-family: dashicons; }
-    .ds-checkbox > input:checked + span:before {
-      content: "\f147";
-      background-color: #515151;
-      color: #fff; }
+    flex-wrap: wrap;
+    align-items: center; }
+    .ds-checkbox > input + span:before {
+      transition: background 0.2s;
+      content: "";
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      background-color: #efefef;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      padding-right: 1px;
+      box-sizing: border-box;
+      border: 0; }
+  .ds-checkbox > input:checked + span:before {
+    font-family: dashicons;
+    content: "\f147";
+    background-color: #515151;
+    color: #fff; }
 .ds-checkbox.ds-input-lg > input + span:before {
   width: 40px;
   height: 40px;

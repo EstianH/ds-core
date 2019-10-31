@@ -198,6 +198,10 @@
 		display: none;
 
 		& + span {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+
 			&:before {
 				transition: background 0.2s;
 				content: "";
@@ -209,6 +213,7 @@
 				font-size: 18px;
 				width: 20px;
 				height: 20px;
+				margin-right: 10px;
 				background-color: $ds-grey;
 				@include ds-border-radius( 2px );
 				padding-right: 1px; // seems offcenter without this padding.
@@ -219,9 +224,8 @@
 
 		&:checked {
 			& + span {
-				font-family: dashicons;
-
 				&:before {
+					font-family: dashicons;
 					content: "\f147";
 					background-color: $ds-grey-dark;
 					color: $white;
