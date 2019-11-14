@@ -739,7 +739,7 @@ Version:     1.2
 .ds-justify-content-end {
   justify-content: flex-end !important; }
 
-.ds-justify-content-beteen {
+.ds-justify-content-between {
   justify-content: space-between !important; }
 
 .clearfix:after {
@@ -1182,7 +1182,7 @@ select.ds-input-box {
   .ds-justify-content-sm-end {
     justify-content: flex-end !important; }
 
-  .ds-justify-content-sm-beteen {
+  .ds-justify-content-sm-between {
     justify-content: space-between !important; } }
 /*
 ██████  ███████        ██████  ██       ██████  ██████   █████  ██       ██     ██ ██ ██████  ████████ ██   ██       ███    ███ ██████
@@ -1450,7 +1450,7 @@ select.ds-input-box {
   .ds-justify-content-md-end {
     justify-content: flex-end !important; }
 
-  .ds-justify-content-md-beteen {
+  .ds-justify-content-md-between {
     justify-content: space-between !important; } }
 /*
 ██████  ███████        ██████  ██       ██████  ██████   █████  ██       ██     ██ ██ ██████  ████████ ██   ██       ██       ██████
@@ -1718,7 +1718,7 @@ select.ds-input-box {
   .ds-justify-content-lg-end {
     justify-content: flex-end !important; }
 
-  .ds-justify-content-lg-beteen {
+  .ds-justify-content-lg-between {
     justify-content: space-between !important; } }
 /*
 ██████  ███████        ██████  ██       ██████  ██████   █████  ██       ██     ██ ██ ██████  ████████ ██   ██      ██   ██ ██
@@ -1986,7 +1986,7 @@ select.ds-input-box {
   .ds-justify-content-xl-end {
     justify-content: flex-end !important; }
 
-  .ds-justify-content-xl-beteen {
+  .ds-justify-content-xl-between {
     justify-content: space-between !important; } }
 /*
 ██████  ███████        ██████  ██       ██████  ██████   █████  ██       ██     ██ ██ ██████  ████████ ██   ██      ██   ██ ██   ██ ██
@@ -2254,7 +2254,7 @@ select.ds-input-box {
   .ds-justify-content-xxl-end {
     justify-content: flex-end !important; }
 
-  .ds-justify-content-xxl-beteen {
+  .ds-justify-content-xxl-between {
     justify-content: space-between !important; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -118,7 +118,7 @@
 .ds-justify-content-center { justify-content: center !important; }
 .ds-justify-content-start  { justify-content: flex-start !important; }
 .ds-justify-content-end    { justify-content: flex-end !important; }
-.ds-justify-content-beteen { justify-content: space-between !important; }
+.ds-justify-content-between { justify-content: space-between !important; }
 
 .clearfix {
 	&:after {
@@ -480,7 +480,7 @@ select {
 	.ds-justify-content-sm-center { justify-content: center !important; }
 	.ds-justify-content-sm-start  { justify-content: flex-start !important; }
 	.ds-justify-content-sm-end    { justify-content: flex-end !important; }
-	.ds-justify-content-sm-beteen { justify-content: space-between !important; }
+	.ds-justify-content-sm-between { justify-content: space-between !important; }
 }
 
 
@@ -596,7 +596,7 @@ select {
 	.ds-justify-content-md-center { justify-content: center !important; }
 	.ds-justify-content-md-start  { justify-content: flex-start !important; }
 	.ds-justify-content-md-end    { justify-content: flex-end !important; }
-	.ds-justify-content-md-beteen { justify-content: space-between !important; }
+	.ds-justify-content-md-between { justify-content: space-between !important; }
 }
 
 
@@ -712,7 +712,7 @@ select {
 	.ds-justify-content-lg-center { justify-content: center !important; }
 	.ds-justify-content-lg-start  { justify-content: flex-start !important; }
 	.ds-justify-content-lg-end    { justify-content: flex-end !important; }
-	.ds-justify-content-lg-beteen { justify-content: space-between !important; }
+	.ds-justify-content-lg-between { justify-content: space-between !important; }
 }
 
 
@@ -828,7 +828,7 @@ select {
 	.ds-justify-content-xl-center { justify-content: center !important; }
 	.ds-justify-content-xl-start  { justify-content: flex-start !important; }
 	.ds-justify-content-xl-end    { justify-content: flex-end !important; }
-	.ds-justify-content-xl-beteen { justify-content: space-between !important; }
+	.ds-justify-content-xl-between { justify-content: space-between !important; }
 }
 
 
@@ -944,5 +944,5 @@ select {
 	.ds-justify-content-xxl-center { justify-content: center !important; }
 	.ds-justify-content-xxl-start  { justify-content: flex-start !important; }
 	.ds-justify-content-xxl-end    { justify-content: flex-end !important; }
-	.ds-justify-content-xxl-beteen { justify-content: space-between !important; }
+	.ds-justify-content-xxl-between { justify-content: space-between !important; }
 }
